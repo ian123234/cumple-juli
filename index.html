@@ -1,71 +1,1778 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Regalo para Danita <3</title>
-  <!-- Agrega la hoja de estilo de Bootstrap -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <style>
-    .regalo {
-      cursor: pointer;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Feliz cumple Juli ❤️</title>
+
+    <meta name="description" content="Un pequeño regalo de parte de todos nosotros para Juli.">
+
+    <!-- Fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Pacifico&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* =========================
+           CONFIGURACIÓN GENERAL
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: #f7f2e8;
+            color: #18333c;
+            overflow-x: hidden;
+        }
+
+        body.bloqueado {
+            overflow: hidden;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        button {
+            font-family: inherit;
+        }
+
+        /* =========================
+           PANTALLA DEL REGALO
+        ========================== */
+
+        #pantalla-regalo {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            min-height: 100vh;
+
+            background:
+                radial-gradient(circle at top, rgba(255, 255, 255, 0.25), transparent 40%),
+                linear-gradient(160deg, #63b8cf, #2b7893 55%, #185469);
+
+            padding: 30px 20px;
+
+            transition:
+                opacity 0.8s ease,
+                visibility 0.8s ease;
+        }
+
+        #pantalla-regalo.ocultar {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .olas-fondo {
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+
+        .olas-fondo svg {
+            width: 200%;
+            height: 170px;
+            animation: moverOlas 10s linear infinite;
+        }
+
+        @keyframes moverOlas {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        .regalo-contenedor {
+            position: relative;
+            z-index: 3;
+            width: min(520px, 100%);
+            text-align: center;
+        }
+
+        .mini-texto {
+            color: rgba(255, 255, 255, 0.8);
+            letter-spacing: 3px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .regalo-contenedor h1 {
+            color: white;
+            font-size: clamp(2.1rem, 7vw, 4rem);
+            margin-bottom: 10px;
+            line-height: 1.05;
+        }
+
+        .regalo-contenedor h1 span {
+            font-family: "Pacifico", cursive;
+            font-weight: normal;
+        }
+
+        .regalo-contenedor p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.05rem;
+            margin-bottom: 30px;
+        }
+
+        .regalo {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 240px;
+            height: 240px;
+
+            cursor: pointer;
+            user-select: none;
+
+            transition: transform 0.3s ease;
+        }
+
+        .regalo:hover {
+            transform: scale(1.05);
+        }
+
+        .regalo img {
+            max-width: 220px;
+            max-height: 220px;
+            object-fit: contain;
+
+            filter: drop-shadow(0 20px 18px rgba(0, 0, 0, 0.25));
+        }
+
+        #regalo-abierto {
+            display: none;
+        }
+
+        .regalo.animar {
+            animation: abrirRegalo 0.8s ease;
+        }
+
+        @keyframes abrirRegalo {
+            0% {
+                transform: scale(1);
+            }
+
+            25% {
+                transform: scale(0.9) rotate(-4deg);
+            }
+
+            50% {
+                transform: scale(1.1) rotate(4deg);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .tocar {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+            margin-top: 20px;
+
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            backdrop-filter: blur(10px);
+
+            color: white;
+
+            padding: 11px 20px;
+            border-radius: 100px;
+
+            font-size: 0.9rem;
+
+            animation: pulso 2s infinite;
+        }
+
+        @keyframes pulso {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        /* =========================
+           BOTÓN MÚSICA
+        ========================== */
+
+        #boton-musica {
+            position: fixed;
+            right: 18px;
+            bottom: 18px;
+            z-index: 500;
+
+            display: none;
+
+            width: 52px;
+            height: 52px;
+
+            border: none;
+            border-radius: 50%;
+
+            background: #ffffff;
+            color: #225c72;
+
+            font-size: 1.35rem;
+            cursor: pointer;
+
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+
+            transition: transform 0.2s ease;
+        }
+
+        #boton-musica:hover {
+            transform: scale(1.08);
+        }
+
+        /* =========================
+           PORTADA
+        ========================== */
+
+        #pagina {
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+
+        #pagina.visible {
+            opacity: 1;
+        }
+
+        .portada {
+            position: relative;
+
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 100px 20px;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(rgba(10, 62, 81, 0.38), rgba(10, 62, 81, 0.55)),
+                url("fotos/foto1.jpg") center / cover no-repeat;
+        }
+
+        .portada-contenido {
+            position: relative;
+            z-index: 2;
+
+            width: min(900px, 100%);
+
+            color: white;
+        }
+
+        .portada-etiqueta {
+            display: inline-block;
+
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+
+            padding: 9px 18px;
+            border-radius: 100px;
+
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+
+            margin-bottom: 25px;
+        }
+
+        .portada h2 {
+            font-family: "Pacifico", cursive;
+            font-weight: normal;
+
+            font-size: clamp(4rem, 12vw, 8rem);
+            line-height: 1;
+
+            text-shadow: 0 7px 25px rgba(0, 0, 0, 0.25);
+
+            margin-bottom: 25px;
+        }
+
+        .portada p {
+            font-size: clamp(1rem, 3vw, 1.35rem);
+            max-width: 650px;
+            margin: auto;
+            line-height: 1.7;
+        }
+
+        .flecha {
+            position: absolute;
+            z-index: 2;
+            bottom: 30px;
+
+            color: white;
+            font-size: 2rem;
+
+            animation: bajar 1.8s infinite;
+        }
+
+        @keyframes bajar {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(10px);
+            }
+        }
+
+        /* =========================
+           SECCIONES
+        ========================== */
+
+        section {
+            padding: 100px 20px;
+        }
+
+        .contenedor {
+            width: min(1100px, 100%);
+            margin: auto;
+        }
+
+        .titulo-seccion {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .titulo-seccion .pequeño {
+            color: #2b849e;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .titulo-seccion h2 {
+            margin-top: 10px;
+
+            font-size: clamp(2.3rem, 7vw, 4rem);
+            line-height: 1.1;
+        }
+
+        .titulo-seccion p {
+            max-width: 600px;
+            margin: 15px auto 0;
+            color: #648087;
+            line-height: 1.7;
+        }
+
+        /* =========================
+           INTRODUCCIÓN
+        ========================== */
+
+        .introduccion {
+            background: #f7f2e8;
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 70px;
+        }
+
+        .intro-texto h2 {
+            font-size: clamp(2.4rem, 6vw, 4.2rem);
+            line-height: 1.05;
+            margin-bottom: 25px;
+        }
+
+        .intro-texto p {
+            color: #59747c;
+            line-height: 1.9;
+            font-size: 1.05rem;
+            margin-bottom: 18px;
+        }
+
+        .foto-polaroid {
+            position: relative;
+
+            background: white;
+            padding: 14px 14px 55px;
+
+            box-shadow: 0 20px 50px rgba(27, 64, 77, 0.15);
+
+            transform: rotate(3deg);
+
+            border-radius: 3px;
+        }
+
+        .foto-polaroid img {
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+        }
+
+        .foto-polaroid span {
+            position: absolute;
+
+            left: 0;
+            right: 0;
+            bottom: 15px;
+
+            text-align: center;
+
+            font-family: "Pacifico", cursive;
+            font-size: 1.3rem;
+            color: #41626b;
+        }
+
+        /* =========================
+           GALERÍA
+        ========================== */
+
+        .galeria-seccion {
+            background: #dceff2;
+        }
+
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 230px;
+
+            gap: 15px;
+        }
+
+        .foto-galeria {
+            position: relative;
+
+            border-radius: 18px;
+            overflow: hidden;
+
+            cursor: pointer;
+
+            box-shadow: 0 7px 20px rgba(22, 75, 91, 0.10);
+        }
+
+        .foto-galeria img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+            transition: transform 0.5s ease;
+        }
+
+        .foto-galeria:hover img {
+            transform: scale(1.08);
+        }
+
+        .foto-galeria:nth-child(1) {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .foto-galeria:nth-child(4) {
+            grid-row: span 2;
+        }
+
+        .foto-galeria:nth-child(7) {
+            grid-column: span 2;
+        }
+
+        /* =========================
+           RECUERDOS
+        ========================== */
+
+        .recuerdos {
+            background: #f7f2e8;
+        }
+
+        .recuerdos-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .recuerdo {
+            background: white;
+
+            padding: 35px;
+
+            border-radius: 22px;
+
+            box-shadow: 0 10px 30px rgba(25, 65, 78, 0.08);
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .recuerdo:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 20px 40px rgba(25, 65, 78, 0.13);
+        }
+
+        .recuerdo .emoji {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .recuerdo h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+
+        .recuerdo p {
+            color: #6b838a;
+            line-height: 1.7;
+        }
+
+        /* =========================
+           MENSAJES
+        ========================== */
+
+        .mensajes {
+            background: #245f73;
+            color: white;
+        }
+
+        .mensajes .titulo-seccion .pequeño {
+            color: #a5e5ef;
+        }
+
+        .mensajes .titulo-seccion p {
+            color: rgba(255, 255, 255, 0.72);
+        }
+
+        .mensajes-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .mensaje {
+            padding: 35px;
+
+            border-radius: 22px;
+
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+
+            backdrop-filter: blur(10px);
+        }
+
+        .mensaje p {
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 20px;
+        }
+
+        .mensaje .nombre {
+            font-weight: 700;
+            color: white;
+        }
+
+        /* =========================
+           SORPRESA
+        ========================== */
+
+        .sorpresa {
+            background: #f7f2e8;
+            text-align: center;
+        }
+
+        .boton-sorpresa {
+            border: none;
+
+            background: #e15368;
+            color: white;
+
+            font-weight: 700;
+            font-size: 1rem;
+
+            padding: 16px 30px;
+            border-radius: 100px;
+
+            cursor: pointer;
+
+            box-shadow: 0 10px 25px rgba(225, 83, 104, 0.25);
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .boton-sorpresa:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(225, 83, 104, 0.35);
+        }
+
+        #mensaje-sorpresa {
+            max-width: 750px;
+
+            margin: 40px auto 0;
+            padding: 35px;
+
+            background: white;
+
+            border-radius: 20px;
+
+            display: none;
+
+            box-shadow: 0 15px 40px rgba(33, 72, 83, 0.1);
+
+            animation: aparecer 0.6s ease;
+        }
+
+        #mensaje-sorpresa h3 {
+            font-size: 1.7rem;
+            margin-bottom: 15px;
+        }
+
+        #mensaje-sorpresa p {
+            color: #637c83;
+            line-height: 1.8;
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* =========================
+           FINAL
+        ========================== */
+
+        .final {
+            position: relative;
+
+            min-height: 85vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            background:
+                linear-gradient(rgba(8, 50, 65, 0.50), rgba(8, 50, 65, 0.70)),
+                url("fotos/foto8.jpg") center / cover no-repeat;
+
+            color: white;
+        }
+
+        .final-contenido {
+            width: min(800px, 100%);
+        }
+
+        .final h2 {
+            font-family: "Pacifico", cursive;
+            font-size: clamp(3.2rem, 10vw, 6rem);
+            font-weight: normal;
+            line-height: 1.15;
+            margin-bottom: 25px;
+        }
+
+        .final p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .corazon-final {
+            display: block;
+
+            font-size: 3rem;
+
+            margin-top: 35px;
+
+            animation: latido 1.4s infinite;
+        }
+
+        @keyframes latido {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        footer {
+            background: #123d4c;
+
+            color: rgba(255, 255, 255, 0.7);
+
+            text-align: center;
+
+            padding: 25px 20px;
+
+            font-size: 0.85rem;
+        }
+
+        /* =========================
+           VISOR DE FOTOS
+        ========================== */
+
+        #modal-foto {
+            position: fixed;
+            inset: 0;
+            z-index: 10000;
+
+            display: none;
+            align-items: center;
+            justify-content: center;
+
+            background: rgba(4, 20, 26, 0.92);
+
+            padding: 30px;
+        }
+
+        #modal-foto.activo {
+            display: flex;
+        }
+
+        #modal-foto img {
+            max-width: 95vw;
+            max-height: 88vh;
+
+            object-fit: contain;
+
+            border-radius: 15px;
+
+            box-shadow: 0 20px 70px rgba(0, 0, 0, 0.5);
+        }
+
+        #cerrar-modal {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+
+            border: none;
+            background: transparent;
+
+            color: white;
+
+            font-size: 2.5rem;
+
+            cursor: pointer;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 850px) {
+
+            section {
+                padding: 75px 18px;
+            }
+
+            .intro-grid {
+                grid-template-columns: 1fr;
+                gap: 45px;
+            }
+
+            .foto-polaroid {
+                max-width: 480px;
+                margin: auto;
+            }
+
+            .galeria {
+                grid-template-columns: repeat(2, 1fr);
+                grid-auto-rows: 190px;
+            }
+
+            .foto-galeria:nth-child(1),
+            .foto-galeria:nth-child(4),
+            .foto-galeria:nth-child(7) {
+                grid-column: auto;
+                grid-row: auto;
+            }
+
+            .foto-galeria:nth-child(1) {
+                grid-column: span 2;
+                grid-row: span 2;
+            }
+
+            .recuerdos-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .mensajes-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .regalo {
+                width: 200px;
+                height: 200px;
+            }
+
+            .regalo img {
+                max-width: 190px;
+                max-height: 190px;
+            }
+
+            .portada {
+                min-height: 100svh;
+            }
+
+            .galeria {
+                grid-auto-rows: 150px;
+                gap: 9px;
+            }
+
+            .recuerdo,
+            .mensaje {
+                padding: 27px;
+            }
+
+            .final {
+                min-height: 75vh;
+            }
+        }
+
+    </style>
 </head>
-<body style="background-color: #bcc7cb;">
 
-<div class="container mt-5">
-  <div class="row">
-    <div class="col-md-6 offset-md-3 text-center">
-         <!-- Div para el regalo -->
-        <div class="regalo" onclick="playAudio()">
-            <!-- Imagen del regalo cerrado -->
-            <img src="regalocerrado.png" alt="Regalo cerrado" class="img-fluid" width="200" id="regalo">
-             <!-- Imagen del regalo abierto -->
-             <img src="regaloabierto.png" alt="Regalo cerrado" class="img-fluid" width="200" id="regaloAb" style="display: none;">
-        </div>
-        <!-- Elemento de audio oculto -->
-        <audio id="audio" controls style="display: none">
-            <source src="felizcumple.mp3" type="audio/mp3">
-        </audio>
-        <!-- Div para el contenido del regalo -->
-        <div class="card mt-3 mb-3" id="contenido" style="display: none;">
-            <div class="card-body">
-                <h5 class="card-title">¡Feliz cumpleaños!</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae consectetur animi perferendis exercitationem voluptatum, quo magni est a sint nisi et itaque quas illo aliquid mollitia temporibus distinctio reiciendis aspernatur?</p>
-                <img src="flork.png" class="img-fluid" width="200">
+<body class="bloqueado">
+
+    <!-- ===================================
+         AUDIO
+    ==================================== -->
+
+    <audio id="musica" loop>
+        <source src="felizcumple.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <!-- ===================================
+         PANTALLA INICIAL DEL REGALO
+    ==================================== -->
+
+    <div id="pantalla-regalo">
+
+        <div class="regalo-contenedor">
+
+            <div class="mini-texto">
+                Un pequeño regalo de parte de todos nosotros
             </div>
+
+            <h1>
+                Tenemos algo para vos,
+                <span>Juli</span>
+            </h1>
+
+            <p>
+                Tocá el regalo para abrirlo ❤️
+            </p>
+
+            <div class="regalo" id="regalo" onclick="abrirRegalo()">
+
+                <img
+                    src="regalocerrado.png"
+                    alt="Regalo cerrado"
+                    id="regalo-cerrado"
+                >
+
+                <img
+                    src="regaloabierto.png"
+                    alt="Regalo abierto"
+                    id="regalo-abierto"
+                >
+
+            </div>
+
+            <div class="tocar">
+                🎁 Tocá para abrir
+            </div>
+
         </div>
+
+
+        <!-- Olas decorativas -->
+
+        <div class="olas-fondo">
+
+            <svg
+                viewBox="0 0 2400 200"
+                preserveAspectRatio="none"
+            >
+
+                <path
+                    fill="#f7f2e8"
+                    d="
+                    M0,80
+                    C200,160 400,0 600,80
+                    C800,160 1000,0 1200,80
+                    C1400,160 1600,0 1800,80
+                    C2000,160 2200,0 2400,80
+                    L2400,200
+                    L0,200
+                    Z"
+                />
+
+            </svg>
+
+        </div>
+
     </div>
-  </div>
-</div>
 
-<!-- Agrega los scripts de Bootstrap y jQuery -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-<!-- Agrega tu propio script JS -->
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.1/dist/confetti.browser.min.js"></script>
-<script>
-    function onClick() {
-        confetti({
-            particleCount: 150,
-            spread: 60
+    <!-- ===================================
+         BOTÓN DE MÚSICA
+    ==================================== -->
+
+    <button id="boton-musica" onclick="alternarMusica()" aria-label="Pausar o reproducir música">
+        🔊
+    </button>
+
+
+    <!-- ===================================
+         PÁGINA PRINCIPAL
+    ==================================== -->
+
+    <main id="pagina">
+
+
+        <!-- PORTADA -->
+
+        <section class="portada">
+
+            <div class="portada-contenido">
+
+                <span class="portada-etiqueta">
+                    2026 · EL GRUPO DE LA COSTA 🌊
+                </span>
+
+                <h2>
+                    Feliz cumple Juli
+                </h2>
+
+                <p>
+                    Entre fotos, viajes, noches, risas y un montón de momentos
+                    que probablemente no deberíamos recordar,
+                    terminamos armando algo para vos.
+                </p>
+
+            </div>
+
+            <div class="flecha">
+                ↓
+            </div>
+
+        </section>
+
+
+        <!-- INTRODUCCIÓN -->
+
+        <section class="introduccion">
+
+            <div class="contenedor">
+
+                <div class="intro-grid">
+
+                    <div class="intro-texto">
+
+                        <h2>
+                            Un recuerdo de todos nosotros.
+                        </h2>
+
+                        <p>
+                            Hay personas que aparecen y terminan formando parte
+                            de un montón de recuerdos sin que uno se dé cuenta.
+                        </p>
+
+                        <p>
+                            Así que para tu cumpleaños quisimos juntar algunas
+                            fotos, momentos y mensajes de este grupo que se
+                            formó en la costa.
+                        </p>
+
+                        <p>
+                            Probablemente falten cientos de fotos y anécdotas,
+                            pero creemos que estas alcanzan para recordar un
+                            poquito de todo lo vivido.
+                        </p>
+
+                    </div>
+
+
+                    <div class="foto-polaroid">
+
+                        <img
+                            src="fotos/foto2.jpg"
+                            alt="Foto del grupo"
+                            onclick="abrirFoto(this.src)"
+                        >
+
+                        <span>
+                            nosotros ❤️
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- GALERÍA -->
+
+        <section class="galeria-seccion">
+
+            <div class="contenedor">
+
+                <div class="titulo-seccion">
+
+                    <span class="pequeño">
+                        El carrete
+                    </span>
+
+                    <h2>
+                        Momentos que quedaron 📸
+                    </h2>
+
+                    <p>
+                        Algunas fotos normales.
+                        Otras no tanto.
+                        Pero todas forman parte de la historia.
+                    </p>
+
+                </div>
+
+
+                <div class="galeria">
+
+                    <div class="foto-galeria">
+                        <img
+                            src="fotos/foto1.jpg"
+                            alt="Recuerdo 1"
+                            onclick="abrirFoto(this.src)"
+                        >
+                    </div>
+
+                    <div class="foto-galeria">
+                        <img
+                            src="fotos/foto2.jpg"
+                            alt="Recuerdo 2"
+                            onclick="abrirFoto(this.src)"
+                        >
+                    </div>
+
+                    <div class="foto-galeria">
+                        <img
+                            src="fotos/foto3.jpg"
+                            alt="Recuerdo 3"
+                            onclick="abrirFoto(this.src)"
+                        >
+                    </div>
+
+                    <div class="foto-galeria">
+                        <img
+                            src="fotos/foto4.jpg"
+                            alt="Recuerdo 4"
+                            onclick="abrirFoto(this.src)"
+                        >
+                    </div>
+
+                    <div class="foto-galeria">
+                        <img
+                            src="fotos/foto5.jpg"
+                            alt="Recuerdo 5"
+                            onclick="abrirFoto(this.src)"
+                        >
+                    </div>
+
+                    <div class="foto-galeria">
+                        <img
+                            src="fotos/foto6.jpg"
+                            alt="Recuerdo 6"
+                            onclick="abrirFoto(this.src)"
+                        >
+                    </div>
+
+                    <div class="foto-galeria">
+                        <img
+                            src="fotos/foto7.jpg"
+                            alt="Recuerdo 7"
+                            onclick="abrirFoto(this.src)"
+                        >
+                    </div>
+
+                    <div class="foto-galeria">
+                        <img
+                            src="fotos/foto8.jpg"
+                            alt="Recuerdo 8"
+                            onclick="abrirFoto(this.src)"
+                        >
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- RECUERDOS -->
+
+        <section class="recuerdos">
+
+            <div class="contenedor">
+
+                <div class="titulo-seccion">
+
+                    <span class="pequeño">
+                        Nuestra historia
+                    </span>
+
+                    <h2>
+                        Cosas que no se olvidan
+                    </h2>
+
+                    <p>
+                        Acá pueden poner anécdotas reales del grupo.
+                        Cambien estos textos por las suyas.
+                    </p>
+
+                </div>
+
+
+                <div class="recuerdos-grid">
+
+                    <article class="recuerdo">
+
+                        <div class="emoji">
+                            🌊
+                        </div>
+
+                        <h3>
+                            La costa
+                        </h3>
+
+                        <p>
+                            Todo empezó ahí. Una banda de personas que
+                            probablemente no sabía que terminaría formando
+                            este grupo.
+                        </p>
+
+                    </article>
+
+
+                    <article class="recuerdo">
+
+                        <div class="emoji">
+                            😂
+                        </div>
+
+                        <h3>
+                            Esa noche...
+                        </h3>
+
+                        <p>
+                            Acá podemos contar alguna de esas historias que
+                            cada vez que alguien menciona hace que todos se
+                            empiecen a reír.
+                        </p>
+
+                    </article>
+
+
+                    <article class="recuerdo">
+
+                        <div class="emoji">
+                            📸
+                        </div>
+
+                        <h3>
+                            Fotos cuestionables
+                        </h3>
+
+                        <p>
+                            Porque todo buen grupo tiene un archivo de fotos
+                            que jamás debería llegar a manos equivocadas.
+                        </p>
+
+                    </article>
+
+
+                    <article class="recuerdo">
+
+                        <div class="emoji">
+                            🌅
+                        </div>
+
+                        <h3>
+                            Los días que quedaron
+                        </h3>
+
+                        <p>
+                            Esos momentos simples que quizás en ese momento
+                            parecían normales y después terminan siendo los que
+                            más recordamos.
+                        </p>
+
+                    </article>
+
+
+                    <article class="recuerdo">
+
+                        <div class="emoji">
+                            🥂
+                        </div>
+
+                        <h3>
+                            Por todo lo vivido
+                        </h3>
+
+                        <p>
+                            Por las salidas, las juntadas, las charlas y todas
+                            las historias que todavía faltan.
+                        </p>
+
+                    </article>
+
+
+                    <article class="recuerdo">
+
+                        <div class="emoji">
+                            ❤️
+                        </div>
+
+                        <h3>
+                            Y por vos
+                        </h3>
+
+                        <p>
+                            Porque obviamente si estamos haciendo una página
+                            entera para tu cumpleaños, algo bien habrás hecho.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MENSAJES DEL GRUPO -->
+
+        <section class="mensajes">
+
+            <div class="contenedor">
+
+                <div class="titulo-seccion">
+
+                    <span class="pequeño">
+                        De nosotros para vos
+                    </span>
+
+                    <h2>
+                        Algunas palabras 💌
+                    </h2>
+
+                    <p>
+                        Acá cada uno puede dejarle un mensaje.
+                    </p>
+
+                </div>
+
+
+                <div class="mensajes-grid">
+
+
+                    <article class="mensaje">
+
+                        <p>
+                            “Juli, feliz cumple. Espero que sigamos sumando
+                            momentos, viajes, juntadas y un montón de recuerdos
+                            más. Gracias por formar parte del grupo.”
+                        </p>
+
+                        <span class="nombre">
+                            — Ian
+                        </span>
+
+                    </article>
+
+
+                    <article class="mensaje">
+
+                        <p>
+                            “Escribí acá el mensaje de otro integrante del
+                            grupo. Puede ser algo sentimental, gracioso o una
+                            anécdota entre ustedes.”
+                        </p>
+
+                        <span class="nombre">
+                            — Nombre
+                        </span>
+
+                    </article>
+
+
+                    <article class="mensaje">
+
+                        <p>
+                            “Acá va otro mensaje. Cada persona puede escribir
+                            unas pocas líneas para que Juli encuentre todos los
+                            mensajes cuando vaya bajando.”
+                        </p>
+
+                        <span class="nombre">
+                            — Nombre
+                        </span>
+
+                    </article>
+
+
+                    <article class="mensaje">
+
+                        <p>
+                            “Y obviamente pueden agregar todos los mensajes
+                            que quieran copiando uno de estos bloques.”
+                        </p>
+
+                        <span class="nombre">
+                            — Nombre
+                        </span>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SORPRESA -->
+
+        <section class="sorpresa">
+
+            <div class="contenedor">
+
+                <div class="titulo-seccion">
+
+                    <span class="pequeño">
+                        Esperá...
+                    </span>
+
+                    <h2>
+                        Falta una cosa
+                    </h2>
+
+                    <p>
+                        Porque claramente no podía terminar ahí.
+                    </p>
+
+                </div>
+
+
+                <button class="boton-sorpresa" onclick="mostrarSorpresa()">
+                    Abrir último mensaje ❤️
+                </button>
+
+
+                <div id="mensaje-sorpresa">
+
+                    <h3>
+                        Feliz cumpleaños, Juli 🫶
+                    </h3>
+
+                    <p>
+                        Ojalá este sea solamente uno de muchísimos cumpleaños
+                        más que podamos compartir. Gracias por todas las
+                        anécdotas, por los buenos momentos y por formar parte
+                        de este grupo de locos.
+                        <br><br>
+                        Esperamos que cuando vuelvas a ver estas fotos dentro
+                        de unos años te acuerdes de todo esto con la misma
+                        sonrisa.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FINAL -->
+
+        <section class="final">
+
+            <div class="final-contenido">
+
+                <h2>
+                    Por muchos veranos más
+                </h2>
+
+                <p>
+                    Feliz cumpleaños Juli.
+                    <br>
+                    De parte de todos nosotros.
+                </p>
+
+                <span class="corazon-final">
+                    ❤️
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+            Hecho con cariño, fotos cuestionables y demasiados recuerdos · 2026 🌊
+        </footer>
+
+    </main>
+
+
+    <!-- ===================================
+         MODAL PARA AGRANDAR FOTOS
+    ==================================== -->
+
+    <div id="modal-foto" onclick="cerrarFoto(event)">
+
+        <button id="cerrar-modal" onclick="cerrarFoto()">
+            ×
+        </button>
+
+        <img id="foto-grande" src="" alt="Foto ampliada">
+
+    </div>
+
+
+    <!-- CONFETTI -->
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+
+    <script>
+
+        const musica = document.getElementById("musica");
+        const botonMusica = document.getElementById("boton-musica");
+
+        let musicaSonando = false;
+        let regaloAbierto = false;
+
+
+        /* ==================================
+           ABRIR REGALO
+        ================================== */
+
+        function abrirRegalo() {
+
+            if (regaloAbierto) {
+                return;
+            }
+
+            regaloAbierto = true;
+
+
+            const regalo = document.getElementById("regalo");
+            const cerrado = document.getElementById("regalo-cerrado");
+            const abierto = document.getElementById("regalo-abierto");
+
+
+            regalo.classList.add("animar");
+
+
+            cerrado.style.display = "none";
+            abierto.style.display = "block";
+
+
+            /* Música */
+
+            musica.volume = 0.55;
+
+            musica.play()
+                .then(() => {
+
+                    musicaSonando = true;
+                    botonMusica.innerHTML = "🔊";
+
+                })
+                .catch(() => {
+
+                    musicaSonando = false;
+                    botonMusica.innerHTML = "🔇";
+
+                });
+
+
+            /* Confeti inicial */
+
+            lanzarConfeti();
+
+
+            /* Más confeti */
+
+            setTimeout(() => {
+
+                confetti({
+                    particleCount: 120,
+                    spread: 100,
+                    origin: {
+                        y: 0.5
+                    }
+                });
+
+            }, 450);
+
+
+            /* Entrar a la página */
+
+            setTimeout(() => {
+
+                document
+                    .getElementById("pantalla-regalo")
+                    .classList
+                    .add("ocultar");
+
+
+                document
+                    .getElementById("pagina")
+                    .classList
+                    .add("visible");
+
+
+                document.body.classList.remove("bloqueado");
+
+                botonMusica.style.display = "block";
+
+                window.scrollTo(0, 0);
+
+            }, 1500);
+
+        }
+
+
+        /* ==================================
+           CONFETTI
+        ================================== */
+
+        function lanzarConfeti() {
+
+            const duracion = 1300;
+
+            const fin = Date.now() + duracion;
+
+
+            (function frame() {
+
+                confetti({
+
+                    particleCount: 6,
+
+                    angle: 60,
+
+                    spread: 60,
+
+                    origin: {
+                        x: 0
+                    }
+
+                });
+
+
+                confetti({
+
+                    particleCount: 6,
+
+                    angle: 120,
+
+                    spread: 60,
+
+                    origin: {
+                        x: 1
+                    }
+
+                });
+
+
+                if (Date.now() < fin) {
+
+                    requestAnimationFrame(frame);
+
+                }
+
+            })();
+
+        }
+
+
+        /* ==================================
+           MÚSICA
+        ================================== */
+
+        function alternarMusica() {
+
+            if (musicaSonando) {
+
+                musica.pause();
+
+                musicaSonando = false;
+
+                botonMusica.innerHTML = "🔇";
+
+            }
+
+            else {
+
+                musica.play();
+
+                musicaSonando = true;
+
+                botonMusica.innerHTML = "🔊";
+
+            }
+
+        }
+
+
+        /* ==================================
+           MENSAJE SORPRESA
+        ================================== */
+
+        function mostrarSorpresa() {
+
+            const mensaje = document.getElementById("mensaje-sorpresa");
+
+            mensaje.style.display = "block";
+
+
+            confetti({
+
+                particleCount: 180,
+
+                spread: 120,
+
+                origin: {
+                    y: 0.7
+                }
+
+            });
+
+
+            mensaje.scrollIntoView({
+
+                behavior: "smooth",
+
+                block: "center"
+
+            });
+
+        }
+
+
+        /* ==================================
+           ABRIR FOTOS
+        ================================== */
+
+        function abrirFoto(src) {
+
+            document.getElementById("foto-grande").src = src;
+
+            document
+                .getElementById("modal-foto")
+                .classList
+                .add("activo");
+
+        }
+
+
+        function cerrarFoto(event) {
+
+            if (
+                event &&
+                event.target.id !== "modal-foto" &&
+                event.target.id !== "cerrar-modal"
+            ) {
+
+                return;
+
+            }
+
+
+            document
+                .getElementById("modal-foto")
+                .classList
+                .remove("activo");
+
+        }
+
+
+        /* Cerrar imagen con Escape */
+
+        document.addEventListener("keydown", function (event) {
+
+            if (event.key === "Escape") {
+
+                document
+                    .getElementById("modal-foto")
+                    .classList
+                    .remove("activo");
+
+            }
+
         });
-    };
-</script>
-<script>
-    function playAudio() {
-        // Obtén el elemento de audio
-        var audio = document.getElementById("audio");
-        // Reproduce el audio
-        audio.play();
-        $("#contenido").toggle();
-        onClick();
-        $("#regalo").toggle();
-        $("#regaloAb").toggle();
-    }
-  </script>
+
+    </script>
+
 </body>
+
 </html>
