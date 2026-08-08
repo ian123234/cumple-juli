@@ -14,7 +14,6 @@
           content="De parte de los boludos de la costa">
 
     <!-- FUENTES -->
-
     <link rel="preconnect"
           href="https://fonts.googleapis.com">
 
@@ -65,7 +64,6 @@
         }
 
 
-
         /* =========================================
            PANTALLA INICIAL
         ========================================== */
@@ -85,13 +83,11 @@
             padding: 30px 20px;
 
             background:
-
                 radial-gradient(
                     circle at top,
                     rgba(255,255,255,.25),
                     transparent 40%
                 ),
-
                 linear-gradient(
                     160deg,
                     #63b8cf,
@@ -102,43 +98,30 @@
             transition:
                 opacity .8s ease,
                 visibility .8s ease;
-
         }
 
 
         #pantalla-regalo.ocultar {
-
             opacity: 0;
             visibility: hidden;
             pointer-events: none;
-
         }
 
 
         .regalo-contenedor {
-
             position: relative;
             z-index: 3;
-
             width: min(540px, 100%);
-
             text-align: center;
-
         }
 
 
         .mini-texto {
-
             color: rgba(255,255,255,.78);
-
             letter-spacing: 3px;
-
             font-size: .74rem;
-
             text-transform: uppercase;
-
             margin-bottom: 15px;
-
         }
 
 
@@ -153,86 +136,65 @@
             );
 
             line-height: 1.05;
-
             margin-bottom: 12px;
-
         }
 
 
         .regalo-contenedor h1 span {
-
             font-family: "Pacifico", cursive;
-
             font-weight: normal;
-
         }
 
 
         .regalo-contenedor p {
-
             color: rgba(255,255,255,.9);
-
             font-size: 1.05rem;
-
             margin-bottom: 25px;
-
         }
 
 
         .regalo {
 
             display: inline-flex;
-
             align-items: center;
-
             justify-content: center;
 
             width: 240px;
-
             height: 240px;
 
             cursor: pointer;
-
             user-select: none;
 
             transition: transform .3s ease;
-
         }
 
 
         .regalo:hover {
-
             transform: scale(1.06);
-
         }
 
 
         .regalo img {
 
             max-width: 220px;
-
             max-height: 220px;
 
             object-fit: contain;
 
-            filter: drop-shadow(
-                0 20px 18px rgba(0,0,0,.25)
-            );
-
+            filter:
+                drop-shadow(
+                    0 20px 18px rgba(0,0,0,.25)
+                );
         }
 
 
         #regalo-abierto {
-
             display: none;
-
         }
 
 
         .regalo.animar {
-
             animation: abrirRegalo .8s ease;
-
         }
 
 
@@ -264,9 +226,7 @@
         .tocar {
 
             display: inline-flex;
-
             align-items: center;
-
             gap: 8px;
 
             margin-top: 18px;
@@ -288,7 +248,6 @@
             font-size: .9rem;
 
             animation: pulso 2s infinite;
-
         }
 
 
@@ -302,9 +261,7 @@
             50% {
                 transform: scale(1.05);
             }
-
         }
-
 
 
         /* =========================================
@@ -323,19 +280,16 @@
             overflow: hidden;
 
             line-height: 0;
-
         }
 
 
         .olas-fondo svg {
 
             width: 200%;
-
             height: 170px;
 
             animation:
                 moverOlas 10s linear infinite;
-
         }
 
 
@@ -348,9 +302,7 @@
             to {
                 transform: translateX(-50%);
             }
-
         }
-
 
 
         /* =========================================
@@ -362,7 +314,6 @@
             position: fixed;
 
             right: 18px;
-
             bottom: 18px;
 
             z-index: 500;
@@ -370,15 +321,12 @@
             display: none;
 
             width: 52px;
-
             height: 52px;
 
             border: none;
-
             border-radius: 50%;
 
             background: white;
-
             color: #225c72;
 
             font-size: 1.35rem;
@@ -390,16 +338,12 @@
 
             transition:
                 transform .2s ease;
-
         }
 
 
         #boton-musica:hover {
-
             transform: scale(1.08);
-
         }
-
 
 
         /* =========================================
@@ -407,20 +351,14 @@
         ========================================== */
 
         #pagina {
-
             opacity: 0;
-
             transition: opacity 1s ease;
-
         }
 
 
         #pagina.visible {
-
             opacity: 1;
-
         }
-
 
 
         /* =========================================
@@ -434,9 +372,7 @@
             min-height: 100vh;
 
             display: flex;
-
             align-items: center;
-
             justify-content: center;
 
             padding: 100px 20px;
@@ -455,20 +391,17 @@
                 url("fotos/foto1.jpg")
                 center / cover
                 no-repeat;
-
         }
 
 
         .portada-contenido {
 
             position: relative;
-
             z-index: 2;
 
             width: min(900px,100%);
 
             color: white;
-
         }
 
 
@@ -489,11 +422,9 @@
             backdrop-filter: blur(10px);
 
             font-size: .8rem;
-
             letter-spacing: 2px;
 
             margin-bottom: 25px;
-
         }
 
 
@@ -511,14 +442,12 @@
                 );
 
             font-weight: normal;
-
             line-height: 1;
 
             margin-bottom: 25px;
 
             text-shadow:
                 0 7px 25px rgba(0,0,0,.25);
-
         }
 
 
@@ -536,7 +465,6 @@
                 );
 
             line-height: 1.7;
-
         }
 
 
@@ -554,7 +482,6 @@
 
             animation:
                 bajar 1.8s infinite;
-
         }
 
 
@@ -568,9 +495,7 @@
             50% {
                 transform: translateY(10px);
             }
-
         }
-
 
 
         /* =========================================
@@ -578,9 +503,7 @@
         ========================================== */
 
         section {
-
             padding: 100px 20px;
-
         }
 
 
@@ -593,16 +516,12 @@
                 );
 
             margin: auto;
-
         }
 
 
         .titulo-seccion {
-
             text-align: center;
-
             margin-bottom: 60px;
-
         }
 
 
@@ -615,9 +534,7 @@
             letter-spacing: 3px;
 
             font-size: .75rem;
-
             font-weight: 700;
-
         }
 
 
@@ -633,7 +550,6 @@
                 );
 
             line-height: 1.1;
-
         }
 
 
@@ -646,9 +562,7 @@
             color: #648087;
 
             line-height: 1.7;
-
         }
-
 
 
         /* =========================================
@@ -656,9 +570,7 @@
         ========================================== */
 
         .introduccion {
-
             background: #f7f2e8;
-
         }
 
 
@@ -672,7 +584,6 @@
             align-items: center;
 
             gap: 70px;
-
         }
 
 
@@ -688,7 +599,6 @@
             line-height: 1.05;
 
             margin-bottom: 25px;
-
         }
 
 
@@ -701,7 +611,6 @@
             font-size: 1.05rem;
 
             margin-bottom: 18px;
-
         }
 
 
@@ -723,7 +632,6 @@
                 rgba(27,64,77,.15);
 
             transform: rotate(3deg);
-
         }
 
 
@@ -736,7 +644,6 @@
             object-fit: cover;
 
             cursor: pointer;
-
         }
 
 
@@ -757,9 +664,7 @@
             font-size: 1.3rem;
 
             color: #41626b;
-
         }
-
 
 
         /* =========================================
@@ -767,9 +672,7 @@
         ========================================== */
 
         .galeria-seccion {
-
             background: #dceff2;
-
         }
 
 
@@ -783,7 +686,6 @@
             grid-auto-rows: 230px;
 
             gap: 15px;
-
         }
 
 
@@ -800,63 +702,69 @@
             box-shadow:
                 0 7px 20px
                 rgba(22,75,91,.10);
-
         }
 
 
         .foto-galeria img {
 
             width: 100%;
-
             height: 100%;
 
             object-fit: cover;
 
             transition:
                 transform .5s ease;
-
         }
 
 
         .foto-galeria:hover img {
-
             transform: scale(1.08);
+        }
 
+
+        /* VIDEOS */
+
+        .video-galeria {
+            background: #000;
+            cursor: default;
+        }
+
+
+        .video-galeria video {
+
+            display: block;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            background: #000;
         }
 
 
         .foto-galeria:nth-child(1) {
-
             grid-column: span 2;
-
             grid-row: span 2;
-
         }
 
 
         .foto-galeria:nth-child(4) {
-
             grid-row: span 2;
-
         }
 
 
         .foto-galeria:nth-child(7) {
-
             grid-column: span 2;
-
         }
 
 
-
         /* =========================================
-           HISTORIA / TIMELINE
+           HISTORIA
         ========================================== */
 
         .historia {
-
             background: #f7f2e8;
-
         }
 
 
@@ -867,7 +775,6 @@
             max-width: 850px;
 
             margin: auto;
-
         }
 
 
@@ -878,9 +785,7 @@
             position: absolute;
 
             left: 25px;
-
             top: 0;
-
             bottom: 0;
 
             width: 3px;
@@ -892,7 +797,6 @@
                     #56a9c0,
                     #245f73
                 );
-
         }
 
 
@@ -903,14 +807,11 @@
             padding-left: 80px;
 
             margin-bottom: 55px;
-
         }
 
 
         .capitulo:last-child {
-
             margin-bottom: 0;
-
         }
 
 
@@ -919,11 +820,9 @@
             position: absolute;
 
             left: 12px;
-
             top: 4px;
 
             width: 29px;
-
             height: 29px;
 
             border-radius: 50%;
@@ -935,7 +834,6 @@
 
             box-shadow:
                 0 0 0 3px #245f73;
-
         }
 
 
@@ -954,7 +852,6 @@
             letter-spacing: 2px;
 
             margin-bottom: 9px;
-
         }
 
 
@@ -969,62 +866,38 @@
             box-shadow:
                 0 10px 30px
                 rgba(25,65,78,.08);
-
         }
 
 
         .capitulo-contenido h3 {
-
             font-size: 1.45rem;
-
             margin-bottom: 10px;
-
         }
 
 
         .capitulo-contenido p {
-
             color: #667f86;
-
             line-height: 1.8;
-
         }
-
 
 
         /* =========================================
-           PREMIOS DEL GRUPO
+           PREMIOS
         ========================================== */
 
         .premios {
-
             background: #245f73;
-
             color: white;
-
         }
 
 
-        .premios
-        .titulo-seccion
-        .pequeno {
-
+        .premios .titulo-seccion .pequeno {
             color: #a5e5ef;
-
         }
 
 
-        .premios
-        .titulo-seccion p {
-
-            color:
-                rgba(
-                    255,
-                    255,
-                    255,
-                    .72
-                );
-
+        .premios .titulo-seccion p {
+            color: rgba(255,255,255,.72);
         }
 
 
@@ -1036,7 +909,6 @@
                 repeat(3,1fr);
 
             gap: 20px;
-
         }
 
 
@@ -1065,13 +937,11 @@
                     .15
                 );
 
-            backdrop-filter:
-                blur(10px);
+            backdrop-filter: blur(10px);
 
             transition:
                 transform .25s ease,
                 background .25s ease;
-
         }
 
 
@@ -1087,25 +957,18 @@
                     255,
                     .15
                 );
-
         }
 
 
         .premio-emoji {
-
             font-size: 2.5rem;
-
             margin-bottom: 18px;
-
         }
 
 
         .premio h3 {
-
             font-size: 1.25rem;
-
             margin-bottom: 10px;
-
         }
 
 
@@ -1120,7 +983,6 @@
                 );
 
             line-height: 1.7;
-
         }
 
 
@@ -1145,9 +1007,7 @@
             font-size: .85rem;
 
             font-weight: 700;
-
         }
-
 
 
         /* =========================================
@@ -1159,7 +1019,6 @@
             background: #f7f2e8;
 
             text-align: center;
-
         }
 
 
@@ -1190,7 +1049,6 @@
             transition:
                 transform .25s ease,
                 box-shadow .25s ease;
-
         }
 
 
@@ -1202,7 +1060,6 @@
             box-shadow:
                 0 15px 35px
                 rgba(225,83,104,.35);
-
         }
 
 
@@ -1229,7 +1086,6 @@
 
             animation:
                 aparecer .6s ease;
-
         }
 
 
@@ -1238,7 +1094,6 @@
             font-size: 1.8rem;
 
             margin-bottom: 15px;
-
         }
 
 
@@ -1247,7 +1102,6 @@
             color: #637c83;
 
             line-height: 1.85;
-
         }
 
 
@@ -1259,7 +1113,6 @@
 
                 transform:
                     translateY(20px);
-
             }
 
             to {
@@ -1268,11 +1121,8 @@
 
                 transform:
                     translateY(0);
-
             }
-
         }
-
 
 
         /* =========================================
@@ -1287,7 +1137,6 @@
 
             border-top:
                 1px solid #e3e8e9;
-
         }
 
 
@@ -1298,7 +1147,6 @@
             font-weight: 600;
 
             margin-bottom: 18px;
-
         }
 
 
@@ -1329,7 +1177,6 @@
             transition:
                 transform .25s ease,
                 box-shadow .25s ease;
-
         }
 
 
@@ -1341,7 +1188,6 @@
             box-shadow:
                 0 12px 30px
                 rgba(36,95,115,.35);
-
         }
 
 
@@ -1358,14 +1204,11 @@
             height: 30px;
 
             margin-top: 18px;
-
         }
 
 
         .ondas.activo {
-
             display: flex;
-
         }
 
 
@@ -1381,35 +1224,23 @@
 
             animation:
                 ondaAudio .7s infinite alternate;
-
         }
 
 
         .onda:nth-child(2) {
-
             animation-delay: .1s;
-
         }
-
 
         .onda:nth-child(3) {
-
             animation-delay: .2s;
-
         }
-
 
         .onda:nth-child(4) {
-
             animation-delay: .3s;
-
         }
 
-
         .onda:nth-child(5) {
-
             animation-delay: .4s;
-
         }
 
 
@@ -1422,9 +1253,7 @@
             to {
                 height: 28px;
             }
-
         }
-
 
 
         /* =========================================
@@ -1457,7 +1286,6 @@
                 url("fotos/foto8.jpg")
                 center / cover
                 no-repeat;
-
         }
 
 
@@ -1468,7 +1296,6 @@
                     800px,
                     100%
                 );
-
         }
 
 
@@ -1490,7 +1317,6 @@
             line-height: 1.15;
 
             margin-bottom: 25px;
-
         }
 
 
@@ -1507,7 +1333,6 @@
                     255,
                     .9
                 );
-
         }
 
 
@@ -1518,7 +1343,6 @@
             font-size: 3.5rem;
 
             margin-top: 25px;
-
         }
 
 
@@ -1532,7 +1356,6 @@
 
             animation:
                 latido 1.4s infinite;
-
         }
 
 
@@ -1546,7 +1369,6 @@
             50% {
                 transform: scale(1.2);
             }
-
         }
 
 
@@ -1569,9 +1391,7 @@
                 20px;
 
             font-size: .85rem;
-
         }
-
 
 
         /* =========================================
@@ -1596,14 +1416,11 @@
 
             background:
                 rgba(4,20,26,.92);
-
         }
 
 
         #modal-foto.activo {
-
             display: flex;
-
         }
 
 
@@ -1620,7 +1437,6 @@
             box-shadow:
                 0 20px 70px
                 rgba(0,0,0,.5);
-
         }
 
 
@@ -1629,7 +1445,6 @@
             position: absolute;
 
             top: 20px;
-
             right: 25px;
 
             border: none;
@@ -1641,9 +1456,7 @@
             font-size: 2.5rem;
 
             cursor: pointer;
-
         }
-
 
 
         /* =========================================
@@ -1657,7 +1470,6 @@
                 padding:
                     75px
                     18px;
-
             }
 
 
@@ -1667,7 +1479,6 @@
                     1fr;
 
                 gap: 45px;
-
             }
 
 
@@ -1676,7 +1487,6 @@
                 max-width: 480px;
 
                 margin: auto;
-
             }
 
 
@@ -1687,7 +1497,6 @@
 
                 grid-auto-rows:
                     190px;
-
             }
 
 
@@ -1698,7 +1507,6 @@
                 grid-column: auto;
 
                 grid-row: auto;
-
             }
 
 
@@ -1707,7 +1515,6 @@
                 grid-column: span 2;
 
                 grid-row: span 2;
-
             }
 
 
@@ -1715,49 +1522,35 @@
 
                 grid-template-columns:
                     repeat(2,1fr);
-
             }
-
         }
 
 
         @media(max-width:600px) {
 
             .premios-grid {
-
-                grid-template-columns:
-                    1fr;
-
+                grid-template-columns: 1fr;
             }
 
 
             .timeline::before {
-
                 left: 17px;
-
             }
 
 
             .capitulo {
-
                 padding-left: 57px;
-
             }
 
 
             .capitulo-punto {
-
                 left: 5px;
-
             }
 
 
             .capitulo-contenido {
-
                 padding: 25px;
-
             }
-
         }
 
 
@@ -1768,7 +1561,6 @@
                 width: 200px;
 
                 height: 200px;
-
             }
 
 
@@ -1777,14 +1569,11 @@
                 max-width: 190px;
 
                 max-height: 190px;
-
             }
 
 
             .portada {
-
                 min-height: 100svh;
-
             }
 
 
@@ -1794,29 +1583,22 @@
                     150px;
 
                 gap: 9px;
-
             }
 
 
             #mensaje-sorpresa {
-
                 padding: 28px 22px;
-
             }
 
 
             .final {
-
                 min-height: 75vh;
-
             }
-
         }
 
     </style>
 
 </head>
-
 
 
 <body class="bloqueado">
@@ -1836,9 +1618,8 @@
     </audio>
 
 
-
     <!-- ========================================
-         AUDIO DEL MENSAJE FINAL
+         AUDIO FINAL
     ========================================= -->
 
     <audio id="audio-final">
@@ -1851,9 +1632,8 @@
     </audio>
 
 
-
     <!-- ========================================
-         REGALO
+         PANTALLA DEL REGALO
     ========================================= -->
 
     <div id="pantalla-regalo">
@@ -1923,17 +1703,14 @@
         </div>
 
 
-
         <!-- OLAS -->
 
         <div class="olas-fondo">
-
 
             <svg
                 viewBox="0 0 2400 200"
                 preserveAspectRatio="none"
             >
-
 
                 <path
 
@@ -1952,15 +1729,12 @@
 
                 />
 
-
             </svg>
-
 
         </div>
 
 
     </div>
-
 
 
     <!-- ========================================
@@ -1972,19 +1746,15 @@
         onclick="alternarMusica()"
         aria-label="Pausar o reproducir música"
     >
-
         🔊
-
     </button>
 
 
-
     <!-- ========================================
-         PÁGINA
+         PÁGINA PRINCIPAL
     ========================================= -->
 
     <main id="pagina">
-
 
 
         <!-- =====================================
@@ -2005,9 +1775,7 @@
 
 
                 <h2>
-
                     Feliz cumple Juli
-
                 </h2>
 
 
@@ -2023,14 +1791,11 @@
 
 
             <div class="flecha">
-
                 ↓
-
             </div>
 
 
         </section>
-
 
 
         <!-- =====================================
@@ -2092,18 +1857,13 @@
                     </div>
 
 
-
                     <div class="foto-polaroid">
 
 
                         <img
-
                             src="fotos/foto2.jpg"
-
                             alt="Foto del grupo"
-
                             onclick="abrirFoto(this.src)"
-
                         >
 
 
@@ -2126,7 +1886,6 @@
         </section>
 
 
-
         <!-- =====================================
              GALERÍA
         ====================================== -->
@@ -2141,16 +1900,12 @@
 
 
                     <span class="pequeno">
-
                         El carrete
-
                     </span>
 
 
                     <h2>
-
                         Momentos que quedaron 📸
-
                     </h2>
 
 
@@ -2166,132 +1921,112 @@
                 </div>
 
 
-
                 <div class="galeria">
 
 
+                    <!-- RECUERDO 1 -->
+
                     <div class="foto-galeria">
 
                         <img
-
                             src="fotos/foto1.jpg"
-
                             alt="Recuerdo 1"
-
                             onclick="abrirFoto(this.src)"
-
                         >
 
                     </div>
 
 
+                    <!-- RECUERDO 2 -->
 
                     <div class="foto-galeria">
 
                         <img
-
                             src="fotos/foto2.jpg"
-
                             alt="Recuerdo 2"
-
                             onclick="abrirFoto(this.src)"
-
                         >
 
                     </div>
 
 
+                    <!-- RECUERDO 3 - IMAGEN -->
 
                     <div class="foto-galeria">
 
                         <img
-
                             src="fotos/foto3.jpg"
-
                             alt="Recuerdo 3"
-
                             onclick="abrirFoto(this.src)"
-
                         >
 
                     </div>
 
 
+                    <!-- RECUERDO 4 - VIDEO 1 -->
 
-                    <div class="foto-galeria">
+                    <div class="foto-galeria video-galeria">
 
-                        <img
-
-                            src="fotos/foto4.jpg"
-
-                            alt="Recuerdo 4"
-
-                            onclick="abrirFoto(this.src)"
-
-                        >
-
-                    </div>
-
-
-
-                    <div class="foto-galeria">
-
-                        <img
-
-                            src="fotos/foto5.jpg"
-
-                            alt="Recuerdo 5"
-
-                            onclick="abrirFoto(this.src)"
-
-                        >
+                        <video
+                            class="video-recuerdo"
+                            src="videos/video1.mp4"
+                            controls
+                            playsinline
+                            preload="metadata"
+                        ></video>
 
                     </div>
 
 
+                    <!-- RECUERDO 5 - VIDEO 2 -->
+
+                    <div class="foto-galeria video-galeria">
+
+                        <video
+                            class="video-recuerdo"
+                            src="videos/video2.mp4"
+                            controls
+                            playsinline
+                            preload="metadata"
+                        ></video>
+
+                    </div>
+
+
+                    <!-- RECUERDO 6 -->
 
                     <div class="foto-galeria">
 
                         <img
-
                             src="fotos/foto6.jpg"
-
                             alt="Recuerdo 6"
-
                             onclick="abrirFoto(this.src)"
-
                         >
 
                     </div>
 
 
+                    <!-- RECUERDO 7 -->
 
                     <div class="foto-galeria">
 
                         <img
-
                             src="fotos/foto7.jpg"
-
                             alt="Recuerdo 7"
-
                             onclick="abrirFoto(this.src)"
-
                         >
 
                     </div>
 
 
+                    <!-- RECUERDO 8 -->
 
                     <div class="foto-galeria">
 
                         <img
-
                             src="fotos/foto8.jpg"
-
                             alt="Recuerdo 8"
-
                             onclick="abrirFoto(this.src)"
-
                         >
 
                     </div>
@@ -2306,10 +2041,8 @@
         </section>
 
 
-
         <!-- =====================================
-             NUEVA SECCIÓN:
-             NUESTRA HISTORIA
+             HISTORIA
         ====================================== -->
 
         <section class="historia">
@@ -2322,9 +2055,7 @@
 
 
                     <span class="pequeno">
-
                         2025 - ∞
-
                     </span>
 
 
@@ -2349,10 +2080,10 @@
                 </div>
 
 
-
                 <div class="timeline">
 
 
+                    <!-- CAPÍTULO 1 -->
 
                     <article class="capitulo">
 
@@ -2361,9 +2092,7 @@
 
 
                         <span class="capitulo-fecha">
-
                             Capítulo 01
-
                         </span>
 
 
@@ -2371,9 +2100,7 @@
 
 
                             <h3>
-
                                 Cuando empezó todo
-
                             </h3>
 
 
@@ -2395,6 +2122,7 @@
                     </article>
 
 
+                    <!-- CAPÍTULO 2 -->
 
                     <article class="capitulo">
 
@@ -2403,9 +2131,7 @@
 
 
                         <span class="capitulo-fecha">
-
                             Capítulo 02
-
                         </span>
 
 
@@ -2413,9 +2139,7 @@
 
 
                             <h3>
-
                                 La costa 🌊
-
                             </h3>
 
 
@@ -2436,6 +2160,7 @@
                     </article>
 
 
+                    <!-- CAPÍTULO 3 -->
 
                     <article class="capitulo">
 
@@ -2444,9 +2169,7 @@
 
 
                         <span class="capitulo-fecha">
-
                             Capítulo 03
-
                         </span>
 
 
@@ -2478,6 +2201,7 @@
                     </article>
 
 
+                    <!-- CAPÍTULO 4 -->
 
                     <article class="capitulo">
 
@@ -2486,9 +2210,7 @@
 
 
                         <span class="capitulo-fecha">
-
                             Capítulo 04
-
                         </span>
 
 
@@ -2496,9 +2218,7 @@
 
 
                             <h3>
-
                                 Lo que todavía falta
-
                             </h3>
 
 
@@ -2529,9 +2249,7 @@
         </section>
 
 
-
         <!-- =====================================
-             NUEVA SECCIÓN:
              PREMIOS DEL GRUPO
         ====================================== -->
 
@@ -2545,16 +2263,12 @@
 
 
                     <span class="pequeno">
-
                         Ceremonia oficial
-
                     </span>
 
 
                     <h2>
-
                         Premios del grupo 🏆
-
                     </h2>
 
 
@@ -2570,18 +2284,14 @@
                 </div>
 
 
-
                 <div class="premios-grid">
-
 
 
                     <article class="premio">
 
 
                         <div class="premio-emoji">
-
                             😂
-
                         </div>
 
 
@@ -2614,14 +2324,11 @@
                     </article>
 
 
-
                     <article class="premio">
 
 
                         <div class="premio-emoji">
-
                             📸
-
                         </div>
 
 
@@ -2653,21 +2360,16 @@
                     </article>
 
 
-
                     <article class="premio">
 
 
                         <div class="premio-emoji">
-
                             💤
-
                         </div>
 
 
                         <h3>
-
                             Primero en desaparecer
-
                         </h3>
 
 
@@ -2691,14 +2393,11 @@
                     </article>
 
 
-
                     <article class="premio">
 
 
                         <div class="premio-emoji">
-
                             🗣️
-
                         </div>
 
 
@@ -2730,21 +2429,16 @@
                     </article>
 
 
-
                     <article class="premio">
 
 
                         <div class="premio-emoji">
-
                             🌊
-
                         </div>
 
 
                         <h3>
-
                             Espíritu de la costa
-
                         </h3>
 
 
@@ -2768,14 +2462,11 @@
                     </article>
 
 
-
                     <article class="premio">
 
 
                         <div class="premio-emoji">
-
                             ❤️
-
                         </div>
 
 
@@ -2816,9 +2507,8 @@
         </section>
 
 
-
         <!-- =====================================
-             SORPRESA
+             SORPRESA FINAL
         ====================================== -->
 
         <section class="sorpresa">
@@ -2831,16 +2521,12 @@
 
 
                     <span class="pequeno">
-
                         Esperá...
-
                     </span>
 
 
                     <h2>
-
                         Falta una cosa
-
                     </h2>
 
 
@@ -2855,19 +2541,12 @@
                 </div>
 
 
-
                 <button
-
                     class="boton-sorpresa"
-
                     onclick="mostrarSorpresa()"
-
                 >
-
                     Abrir último mensaje ❤️
-
                 </button>
-
 
 
                 <div id="mensaje-sorpresa">
@@ -2905,7 +2584,6 @@
                     </p>
 
 
-
                     <!-- AUDIO FINAL -->
 
                     <div class="audio-final">
@@ -2920,19 +2598,12 @@
 
 
                         <button
-
                             class="boton-audio-final"
-
                             id="boton-audio-final"
-
                             onclick="alternarAudioFinal()"
-
                         >
-
                             ▶ Escuchar mensaje
-
                         </button>
-
 
 
                         <div
@@ -2940,17 +2611,11 @@
                             id="ondas"
                         >
 
-
                             <span class="onda"></span>
-
                             <span class="onda"></span>
-
                             <span class="onda"></span>
-
                             <span class="onda"></span>
-
                             <span class="onda"></span>
-
 
                         </div>
 
@@ -2965,7 +2630,6 @@
 
 
         </section>
-
 
 
         <!-- =====================================
@@ -2998,16 +2662,12 @@
 
 
                 <span class="infinito-final">
-
                     ∞
-
                 </span>
 
 
                 <span class="corazon-final">
-
                     ❤️
-
                 </span>
 
 
@@ -3015,7 +2675,6 @@
 
 
         </section>
-
 
 
         <footer>
@@ -3031,7 +2690,6 @@
     </main>
 
 
-
     <!-- ========================================
          MODAL FOTO
     ========================================= -->
@@ -3043,31 +2701,21 @@
 
 
         <button
-
             id="cerrar-modal"
-
             onclick="cerrarFoto()"
-
         >
-
             ×
-
         </button>
 
 
         <img
-
             id="foto-grande"
-
             src=""
-
             alt="Foto ampliada"
-
         >
 
 
     </div>
-
 
 
     <!-- ========================================
@@ -3077,7 +2725,6 @@
     <script
         src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"
     ></script>
-
 
 
     <script>
@@ -3124,7 +2771,6 @@
         let audioFinalSonando = false;
 
 
-
         /* =====================================
            ABRIR REGALO
         ====================================== */
@@ -3133,9 +2779,7 @@
 
 
             if(regaloAbierto) {
-
                 return;
-
             }
 
 
@@ -3182,36 +2826,28 @@
 
                 .then(() => {
 
-
                     musicaSonando =
                         true;
 
-
                     botonMusica.innerHTML =
                         "🔊";
-
 
                 })
 
                 .catch(() => {
 
-
                     musicaSonando =
                         false;
-
 
                     botonMusica.innerHTML =
                         "🔇";
 
-
                 });
-
 
 
             /* CONFETTI */
 
             lanzarConfeti();
-
 
 
             setTimeout(() => {
@@ -3226,9 +2862,7 @@
                         100,
 
                     origin: {
-
                         y: .5
-
                     }
 
                 });
@@ -3237,38 +2871,29 @@
             },450);
 
 
-
             /* MOSTRAR PÁGINA */
 
             setTimeout(() => {
 
 
                 document
-
                     .getElementById(
                         "pantalla-regalo"
                     )
-
                     .classList
-
                     .add(
                         "ocultar"
                     );
 
 
-
                 document
-
                     .getElementById(
                         "pagina"
                     )
-
                     .classList
-
                     .add(
                         "visible"
                     );
-
 
 
                 document.body.classList.remove(
@@ -3292,7 +2917,6 @@
         }
 
 
-
         /* =====================================
            CONFETTI
         ====================================== */
@@ -3307,7 +2931,6 @@
             const fin =
                 Date.now() +
                 duracion;
-
 
 
             (function frame(){
@@ -3325,13 +2948,10 @@
                         60,
 
                     origin: {
-
                         x: 0
-
                     }
 
                 });
-
 
 
                 confetti({
@@ -3346,13 +2966,10 @@
                         60,
 
                     origin: {
-
                         x: 1
-
                     }
 
                 });
-
 
 
                 if(
@@ -3373,7 +2990,6 @@
         }
 
 
-
         /* =====================================
            MÚSICA DE FONDO
         ====================================== */
@@ -3386,10 +3002,8 @@
 
                 musica.pause();
 
-
                 musicaSonando =
                     false;
-
 
                 botonMusica.innerHTML =
                     "🔇";
@@ -3401,9 +3015,7 @@
             else{
 
 
-                /* si está sonando
-                   el mensaje final,
-                   lo pausamos */
+                /* PAUSAR AUDIO FINAL */
 
                 if(audioFinalSonando){
 
@@ -3427,6 +3039,11 @@
                 }
 
 
+                /* PAUSAR VIDEOS */
+
+                pausarVideos();
+
+
                 musica.play();
 
 
@@ -3443,6 +3060,96 @@
 
         }
 
+
+        /* =====================================
+           VIDEOS DE LA GALERÍA
+        ====================================== */
+
+        const videosRecuerdo =
+            document.querySelectorAll(
+                ".video-recuerdo"
+            );
+
+
+        videosRecuerdo.forEach(
+            function(video){
+
+
+                /* CUANDO EMPIEZA UN VIDEO */
+
+                video.addEventListener(
+                    "play",
+                    function(){
+
+
+                        /* Pausar música */
+
+                        musica.pause();
+
+                        musicaSonando =
+                            false;
+
+                        botonMusica.innerHTML =
+                            "🔇";
+
+
+                        /* Pausar audio final */
+
+                        if(audioFinalSonando){
+
+                            audioFinal.pause();
+
+                            audioFinalSonando =
+                                false;
+
+                            botonAudioFinal.innerHTML =
+                                "▶ Continuar mensaje";
+
+                            ondas.classList.remove(
+                                "activo"
+                            );
+
+                        }
+
+
+                        /* Pausar cualquier otro video */
+
+                        videosRecuerdo.forEach(
+                            function(otroVideo){
+
+                                if(
+                                    otroVideo !== video
+                                ){
+
+                                    otroVideo.pause();
+
+                                }
+
+                            }
+                        );
+
+
+                    }
+                );
+
+
+            }
+        );
+
+
+        function pausarVideos(){
+
+
+            videosRecuerdo.forEach(
+                function(video){
+
+                    video.pause();
+
+                }
+            );
+
+
+        }
 
 
         /* =====================================
@@ -3462,7 +3169,6 @@
                 "block";
 
 
-
             confetti({
 
                 particleCount:
@@ -3472,13 +3178,10 @@
                     120,
 
                 origin: {
-
                     y: .7
-
                 }
 
             });
-
 
 
             mensaje.scrollIntoView({
@@ -3493,7 +3196,6 @@
 
 
         }
-
 
 
         /* =====================================
@@ -3528,8 +3230,7 @@
             }
 
 
-
-            /* Pausa música fondo */
+            /* PAUSAR MÚSICA */
 
             musica.pause();
 
@@ -3542,8 +3243,12 @@
                 "🔇";
 
 
+            /* PAUSAR VIDEOS */
 
-            /* Reproduce mensaje */
+            pausarVideos();
+
+
+            /* REPRODUCIR MENSAJE */
 
             audioFinal.play()
 
@@ -3581,8 +3286,7 @@
         }
 
 
-
-        /* CUANDO TERMINA EL AUDIO */
+        /* CUANDO TERMINA EL AUDIO FINAL */
 
         audioFinal.addEventListener(
             "ended",
@@ -3606,7 +3310,6 @@
         );
 
 
-
         /* =====================================
            ABRIR FOTO
         ====================================== */
@@ -3615,31 +3318,24 @@
 
 
             document
-
                 .getElementById(
                     "foto-grande"
                 )
-
                 .src =
                     src;
 
 
-
             document
-
                 .getElementById(
                     "modal-foto"
                 )
-
                 .classList
-
                 .add(
                     "activo"
                 );
 
 
         }
-
 
 
         /* =====================================
@@ -3666,22 +3362,17 @@
             }
 
 
-
             document
-
                 .getElementById(
                     "modal-foto"
                 )
-
                 .classList
-
                 .remove(
                     "activo"
                 );
 
 
         }
-
 
 
         /* =====================================
@@ -3700,13 +3391,10 @@
 
 
                     document
-
                         .getElementById(
                             "modal-foto"
                         )
-
                         .classList
-
                         .remove(
                             "activo"
                         );
