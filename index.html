@@ -65,7 +65,7 @@
 
 
         /* =========================================
-           PANTALLA INICIAL
+           REGALO INICIAL
         ========================================== */
 
         #pantalla-regalo {
@@ -100,13 +100,11 @@
                 visibility .8s ease;
         }
 
-
         #pantalla-regalo.ocultar {
             opacity: 0;
             visibility: hidden;
             pointer-events: none;
         }
-
 
         .regalo-contenedor {
             position: relative;
@@ -115,15 +113,18 @@
             text-align: center;
         }
 
-
         .mini-texto {
+
             color: rgba(255,255,255,.78);
+
             letter-spacing: 3px;
+
             font-size: .74rem;
+
             text-transform: uppercase;
+
             margin-bottom: 15px;
         }
-
 
         .regalo-contenedor h1 {
 
@@ -136,47 +137,53 @@
             );
 
             line-height: 1.05;
+
             margin-bottom: 12px;
         }
 
-
         .regalo-contenedor h1 span {
+
             font-family: "Pacifico", cursive;
+
             font-weight: normal;
         }
 
-
         .regalo-contenedor p {
+
             color: rgba(255,255,255,.9);
+
             font-size: 1.05rem;
+
             margin-bottom: 25px;
         }
-
 
         .regalo {
 
             display: inline-flex;
+
             align-items: center;
+
             justify-content: center;
 
             width: 240px;
+
             height: 240px;
 
             cursor: pointer;
+
             user-select: none;
 
             transition: transform .3s ease;
         }
 
-
         .regalo:hover {
             transform: scale(1.06);
         }
 
-
         .regalo img {
 
             max-width: 220px;
+
             max-height: 220px;
 
             object-fit: contain;
@@ -187,16 +194,13 @@
                 );
         }
 
-
         #regalo-abierto {
             display: none;
         }
 
-
         .regalo.animar {
             animation: abrirRegalo .8s ease;
         }
-
 
         @keyframes abrirRegalo {
 
@@ -219,14 +223,14 @@
             100% {
                 transform: scale(1);
             }
-
         }
-
 
         .tocar {
 
             display: inline-flex;
+
             align-items: center;
+
             gap: 8px;
 
             margin-top: 18px;
@@ -249,7 +253,6 @@
 
             animation: pulso 2s infinite;
         }
-
 
         @keyframes pulso {
 
@@ -282,16 +285,15 @@
             line-height: 0;
         }
 
-
         .olas-fondo svg {
 
             width: 200%;
+
             height: 170px;
 
             animation:
                 moverOlas 10s linear infinite;
         }
-
 
         @keyframes moverOlas {
 
@@ -327,6 +329,7 @@
             border-radius: 50%;
 
             background: white;
+
             color: #225c72;
 
             font-size: 1.35rem;
@@ -336,10 +339,8 @@
             box-shadow:
                 0 7px 25px rgba(0,0,0,.15);
 
-            transition:
-                transform .2s ease;
+            transition: transform .2s ease;
         }
-
 
         #boton-musica:hover {
             transform: scale(1.08);
@@ -351,10 +352,11 @@
         ========================================== */
 
         #pagina {
+
             opacity: 0;
+
             transition: opacity 1s ease;
         }
-
 
         #pagina.visible {
             opacity: 1;
@@ -372,7 +374,9 @@
             min-height: 100vh;
 
             display: flex;
+
             align-items: center;
+
             justify-content: center;
 
             padding: 100px 20px;
@@ -393,17 +397,16 @@
                 no-repeat;
         }
 
-
         .portada-contenido {
 
             position: relative;
+
             z-index: 2;
 
             width: min(900px,100%);
 
             color: white;
         }
-
 
         .portada-etiqueta {
 
@@ -422,11 +425,11 @@
             backdrop-filter: blur(10px);
 
             font-size: .8rem;
+
             letter-spacing: 2px;
 
             margin-bottom: 25px;
         }
-
 
         .portada h2 {
 
@@ -442,6 +445,7 @@
                 );
 
             font-weight: normal;
+
             line-height: 1;
 
             margin-bottom: 25px;
@@ -449,7 +453,6 @@
             text-shadow:
                 0 7px 25px rgba(0,0,0,.25);
         }
-
 
         .portada p {
 
@@ -467,7 +470,6 @@
             line-height: 1.7;
         }
 
-
         .flecha {
 
             position: absolute;
@@ -483,7 +485,6 @@
             animation:
                 bajar 1.8s infinite;
         }
-
 
         @keyframes bajar {
 
@@ -506,7 +507,6 @@
             padding: 100px 20px;
         }
 
-
         .contenedor {
 
             width:
@@ -518,12 +518,12 @@
             margin: auto;
         }
 
-
         .titulo-seccion {
+
             text-align: center;
+
             margin-bottom: 60px;
         }
-
 
         .titulo-seccion .pequeno {
 
@@ -534,9 +534,9 @@
             letter-spacing: 3px;
 
             font-size: .75rem;
+
             font-weight: 700;
         }
-
 
         .titulo-seccion h2 {
 
@@ -551,7 +551,6 @@
 
             line-height: 1.1;
         }
-
 
         .titulo-seccion p {
 
@@ -573,7 +572,6 @@
             background: #f7f2e8;
         }
 
-
         .intro-grid {
 
             display: grid;
@@ -585,7 +583,6 @@
 
             gap: 70px;
         }
-
 
         .intro-texto h2 {
 
@@ -601,7 +598,6 @@
             margin-bottom: 25px;
         }
 
-
         .intro-texto p {
 
             color: #59747c;
@@ -612,7 +608,6 @@
 
             margin-bottom: 18px;
         }
-
 
         .foto-polaroid {
 
@@ -634,7 +629,6 @@
             transform: rotate(3deg);
         }
 
-
         .foto-polaroid img {
 
             width: 100%;
@@ -645,7 +639,6 @@
 
             cursor: pointer;
         }
-
 
         .foto-polaroid span {
 
@@ -675,7 +668,6 @@
             background: #dceff2;
         }
 
-
         .galeria {
 
             display: grid;
@@ -688,7 +680,6 @@
             gap: 15px;
         }
 
-
         .foto-galeria {
 
             position: relative;
@@ -699,15 +690,17 @@
 
             cursor: pointer;
 
+            background: #c6dfe4;
+
             box-shadow:
                 0 7px 20px
                 rgba(22,75,91,.10);
         }
 
-
         .foto-galeria img {
 
             width: 100%;
+
             height: 100%;
 
             object-fit: cover;
@@ -716,25 +709,28 @@
                 transform .5s ease;
         }
 
-
         .foto-galeria:hover img {
             transform: scale(1.08);
         }
 
 
-        /* VIDEOS */
+        /* =========================================
+           VIDEOS
+        ========================================== */
 
         .video-galeria {
+
             background: #000;
+
             cursor: default;
         }
-
 
         .video-galeria video {
 
             display: block;
 
             width: 100%;
+
             height: 100%;
 
             object-fit: cover;
@@ -743,20 +739,46 @@
         }
 
 
+        /* =========================================
+           FORMAS DE LA GALERÍA
+        ========================================== */
+
+
+        /* RECUERDO 1 GRANDE */
+
         .foto-galeria:nth-child(1) {
+
             grid-column: span 2;
+
             grid-row: span 2;
         }
 
+
+        /* RECUERDO 4 - VIDEO VERTICAL */
 
         .foto-galeria:nth-child(4) {
+
             grid-row: span 2;
+
+            grid-column: span 1;
         }
 
 
-        .foto-galeria:nth-child(7) {
-            grid-column: span 2;
+        /* RECUERDO 5 - VIDEO VERTICAL */
+
+        .foto-galeria:nth-child(5) {
+
+            grid-row: span 2;
+
+            grid-column: span 1;
         }
+
+
+        /*
+            IMPORTANTE:
+            EL 7 Y EL 8 NO TIENEN REGLAS ESPECIALES.
+            POR ESO QUEDAN EN TAMAÑO NORMAL.
+        */
 
 
         /* =========================================
@@ -767,7 +789,6 @@
             background: #f7f2e8;
         }
 
-
         .timeline {
 
             position: relative;
@@ -777,7 +798,6 @@
             margin: auto;
         }
 
-
         .timeline::before {
 
             content: "";
@@ -785,7 +805,9 @@
             position: absolute;
 
             left: 25px;
+
             top: 0;
+
             bottom: 0;
 
             width: 3px;
@@ -799,7 +821,6 @@
                 );
         }
 
-
         .capitulo {
 
             position: relative;
@@ -809,20 +830,20 @@
             margin-bottom: 55px;
         }
 
-
         .capitulo:last-child {
             margin-bottom: 0;
         }
-
 
         .capitulo-punto {
 
             position: absolute;
 
             left: 12px;
+
             top: 4px;
 
             width: 29px;
+
             height: 29px;
 
             border-radius: 50%;
@@ -835,7 +856,6 @@
             box-shadow:
                 0 0 0 3px #245f73;
         }
-
 
         .capitulo-fecha {
 
@@ -854,7 +874,6 @@
             margin-bottom: 9px;
         }
 
-
         .capitulo-contenido {
 
             background: white;
@@ -868,15 +887,17 @@
                 rgba(25,65,78,.08);
         }
 
-
         .capitulo-contenido h3 {
+
             font-size: 1.45rem;
+
             margin-bottom: 10px;
         }
 
-
         .capitulo-contenido p {
+
             color: #667f86;
+
             line-height: 1.8;
         }
 
@@ -886,20 +907,26 @@
         ========================================== */
 
         .premios {
+
             background: #245f73;
+
             color: white;
         }
-
 
         .premios .titulo-seccion .pequeno {
             color: #a5e5ef;
         }
 
-
         .premios .titulo-seccion p {
-            color: rgba(255,255,255,.72);
-        }
 
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .72
+                );
+        }
 
         .premios-grid {
 
@@ -910,7 +937,6 @@
 
             gap: 20px;
         }
-
 
         .premio {
 
@@ -937,13 +963,13 @@
                     .15
                 );
 
-            backdrop-filter: blur(10px);
+            backdrop-filter:
+                blur(10px);
 
             transition:
                 transform .25s ease,
                 background .25s ease;
         }
-
 
         .premio:hover {
 
@@ -959,18 +985,19 @@
                 );
         }
 
-
         .premio-emoji {
+
             font-size: 2.5rem;
+
             margin-bottom: 18px;
         }
 
-
         .premio h3 {
+
             font-size: 1.25rem;
+
             margin-bottom: 10px;
         }
-
 
         .premio p {
 
@@ -984,7 +1011,6 @@
 
             line-height: 1.7;
         }
-
 
         .ganador {
 
@@ -1021,7 +1047,6 @@
             text-align: center;
         }
 
-
         .boton-sorpresa {
 
             border: none;
@@ -1051,7 +1076,6 @@
                 box-shadow .25s ease;
         }
 
-
         .boton-sorpresa:hover {
 
             transform:
@@ -1061,7 +1085,6 @@
                 0 15px 35px
                 rgba(225,83,104,.35);
         }
-
 
         #mensaje-sorpresa {
 
@@ -1088,7 +1111,6 @@
                 aparecer .6s ease;
         }
 
-
         #mensaje-sorpresa h3 {
 
             font-size: 1.8rem;
@@ -1096,14 +1118,12 @@
             margin-bottom: 15px;
         }
 
-
         #mensaje-sorpresa > p {
 
             color: #637c83;
 
             line-height: 1.85;
         }
-
 
         @keyframes aparecer {
 
@@ -1139,7 +1159,6 @@
                 1px solid #e3e8e9;
         }
 
-
         .audio-final .audio-texto {
 
             color: #18333c;
@@ -1148,7 +1167,6 @@
 
             margin-bottom: 18px;
         }
-
 
         .boton-audio-final {
 
@@ -1179,7 +1197,6 @@
                 box-shadow .25s ease;
         }
 
-
         .boton-audio-final:hover {
 
             transform:
@@ -1189,7 +1206,6 @@
                 0 12px 30px
                 rgba(36,95,115,.35);
         }
-
 
         .ondas {
 
@@ -1206,11 +1222,9 @@
             margin-top: 18px;
         }
 
-
         .ondas.activo {
             display: flex;
         }
-
 
         .onda {
 
@@ -1223,9 +1237,9 @@
             background: #2b849e;
 
             animation:
-                ondaAudio .7s infinite alternate;
+                ondaAudio .7s
+                infinite alternate;
         }
-
 
         .onda:nth-child(2) {
             animation-delay: .1s;
@@ -1242,7 +1256,6 @@
         .onda:nth-child(5) {
             animation-delay: .4s;
         }
-
 
         @keyframes ondaAudio {
 
@@ -1288,7 +1301,6 @@
                 no-repeat;
         }
 
-
         .final-contenido {
 
             width:
@@ -1297,7 +1309,6 @@
                     100%
                 );
         }
-
 
         .final h2 {
 
@@ -1319,7 +1330,6 @@
             margin-bottom: 25px;
         }
 
-
         .final p {
 
             font-size: 1.15rem;
@@ -1335,7 +1345,6 @@
                 );
         }
 
-
         .infinito-final {
 
             display: block;
@@ -1344,7 +1353,6 @@
 
             margin-top: 25px;
         }
-
 
         .corazon-final {
 
@@ -1358,7 +1366,6 @@
                 latido 1.4s infinite;
         }
 
-
         @keyframes latido {
 
             0%,
@@ -1370,7 +1377,6 @@
                 transform: scale(1.2);
             }
         }
-
 
         footer {
 
@@ -1395,7 +1401,7 @@
 
 
         /* =========================================
-           VISOR DE FOTOS
+           MODAL FOTO
         ========================================== */
 
         #modal-foto {
@@ -1418,11 +1424,9 @@
                 rgba(4,20,26,.92);
         }
 
-
         #modal-foto.activo {
             display: flex;
         }
-
 
         #modal-foto img {
 
@@ -1439,12 +1443,12 @@
                 rgba(0,0,0,.5);
         }
 
-
         #cerrar-modal {
 
             position: absolute;
 
             top: 20px;
+
             right: 25px;
 
             border: none;
@@ -1460,7 +1464,7 @@
 
 
         /* =========================================
-           RESPONSIVE
+           TABLET
         ========================================== */
 
         @media(max-width:850px) {
@@ -1472,7 +1476,6 @@
                     18px;
             }
 
-
             .intro-grid {
 
                 grid-template-columns:
@@ -1481,14 +1484,12 @@
                 gap: 45px;
             }
 
-
             .foto-polaroid {
 
                 max-width: 480px;
 
                 margin: auto;
             }
-
 
             .galeria {
 
@@ -1500,9 +1501,11 @@
             }
 
 
-            .foto-galeria:nth-child(1),
-            .foto-galeria:nth-child(4),
-            .foto-galeria:nth-child(7) {
+            /*
+                RESETEAMOS TODAS LAS FORMAS
+            */
+
+            .foto-galeria {
 
                 grid-column: auto;
 
@@ -1510,12 +1513,45 @@
             }
 
 
+            /*
+                RECUERDO 1 GRANDE
+            */
+
             .foto-galeria:nth-child(1) {
 
                 grid-column: span 2;
 
                 grid-row: span 2;
             }
+
+
+            /*
+                RECUERDO 4 VERTICAL
+            */
+
+            .foto-galeria:nth-child(4) {
+
+                grid-column: span 1;
+
+                grid-row: span 2;
+            }
+
+
+            /*
+                RECUERDO 5 VERTICAL
+            */
+
+            .foto-galeria:nth-child(5) {
+
+                grid-column: span 1;
+
+                grid-row: span 2;
+            }
+
+
+            /*
+                7 Y 8 QUEDAN NORMALES
+            */
 
 
             .premios-grid {
@@ -1526,27 +1562,27 @@
         }
 
 
+        /* =========================================
+           CELULAR
+        ========================================== */
+
         @media(max-width:600px) {
 
             .premios-grid {
                 grid-template-columns: 1fr;
             }
 
-
             .timeline::before {
                 left: 17px;
             }
-
 
             .capitulo {
                 padding-left: 57px;
             }
 
-
             .capitulo-punto {
                 left: 5px;
             }
-
 
             .capitulo-contenido {
                 padding: 25px;
@@ -1563,7 +1599,6 @@
                 height: 200px;
             }
 
-
             .regalo img {
 
                 max-width: 190px;
@@ -1571,11 +1606,9 @@
                 max-height: 190px;
             }
 
-
             .portada {
                 min-height: 100svh;
             }
-
 
             .galeria {
 
@@ -1586,13 +1619,36 @@
             }
 
 
-            #mensaje-sorpresa {
-                padding: 28px 22px;
+            /*
+                LOS VIDEOS 4 Y 5
+                SIGUEN VERTICALES
+            */
+
+            .foto-galeria:nth-child(4),
+            .foto-galeria:nth-child(5) {
+
+                grid-column: span 1;
+
+                grid-row: span 2;
             }
 
 
+            /*
+                7 Y 8 SON NORMALES
+            */
+
+
+            #mensaje-sorpresa {
+
+                padding:
+                    28px
+                    22px;
+            }
+
             .final {
-                min-height: 75vh;
+
+                min-height:
+                    75vh;
             }
         }
 
@@ -1604,9 +1660,9 @@
 <body class="bloqueado">
 
 
-    <!-- ========================================
+    <!-- =========================================
          MÚSICA DE FONDO
-    ========================================= -->
+    ========================================== -->
 
     <audio id="musica" loop>
 
@@ -1618,9 +1674,9 @@
     </audio>
 
 
-    <!-- ========================================
+    <!-- =========================================
          AUDIO FINAL
-    ========================================= -->
+    ========================================== -->
 
     <audio id="audio-final">
 
@@ -1632,9 +1688,9 @@
     </audio>
 
 
-    <!-- ========================================
-         PANTALLA DEL REGALO
-    ========================================= -->
+    <!-- =========================================
+         REGALO
+    ========================================== -->
 
     <div id="pantalla-regalo">
 
@@ -1703,14 +1759,14 @@
         </div>
 
 
-        <!-- OLAS -->
-
         <div class="olas-fondo">
+
 
             <svg
                 viewBox="0 0 2400 200"
                 preserveAspectRatio="none"
             >
+
 
                 <path
 
@@ -1729,7 +1785,9 @@
 
                 />
 
+
             </svg>
+
 
         </div>
 
@@ -1737,22 +1795,24 @@
     </div>
 
 
-    <!-- ========================================
+    <!-- =========================================
          BOTÓN MÚSICA
-    ========================================= -->
+    ========================================== -->
 
     <button
         id="boton-musica"
         onclick="alternarMusica()"
         aria-label="Pausar o reproducir música"
     >
+
         🔊
+
     </button>
 
 
-    <!-- ========================================
-         PÁGINA PRINCIPAL
-    ========================================= -->
+    <!-- =========================================
+         PÁGINA
+    ========================================== -->
 
     <main id="pagina">
 
@@ -1775,7 +1835,9 @@
 
 
                 <h2>
+
                     Feliz cumple Juli
+
                 </h2>
 
 
@@ -1791,7 +1853,9 @@
 
 
             <div class="flecha">
+
                 ↓
+
             </div>
 
 
@@ -1799,7 +1863,7 @@
 
 
         <!-- =====================================
-             INTRODUCCIÓN
+             INTRO
         ====================================== -->
 
         <section class="introduccion">
@@ -1869,7 +1933,8 @@
 
                         <span>
 
-                            nosotros ❤️ (Es bastante preocupante las apariciones de nico)
+                            nosotros ❤️
+                            (Es bastante preocupante las apariciones de nico)
 
                         </span>
 
@@ -1900,12 +1965,16 @@
 
 
                     <span class="pequeno">
+
                         El carrete
+
                     </span>
 
 
                     <h2>
+
                         Momentos que quedaron 📸
+
                     </h2>
 
 
@@ -1950,7 +2019,7 @@
                     </div>
 
 
-                    <!-- RECUERDO 3 - IMAGEN -->
+                    <!-- RECUERDO 3 -->
 
                     <div class="foto-galeria">
 
@@ -1963,7 +2032,9 @@
                     </div>
 
 
-                    <!-- RECUERDO 4 - VIDEO 1 -->
+                    <!-- =================================
+                         RECUERDO 4 - VIDEO
+                    ================================== -->
 
                     <div class="foto-galeria video-galeria">
 
@@ -1978,7 +2049,9 @@
                     </div>
 
 
-                    <!-- RECUERDO 5 - VIDEO 2 -->
+                    <!-- =================================
+                         RECUERDO 5 - VIDEO VERTICAL
+                    ================================== -->
 
                     <div class="foto-galeria video-galeria">
 
@@ -2006,7 +2079,9 @@
                     </div>
 
 
-                    <!-- RECUERDO 7 -->
+                    <!-- =================================
+                         RECUERDO 7 - NORMAL
+                    ================================== -->
 
                     <div class="foto-galeria">
 
@@ -2019,7 +2094,9 @@
                     </div>
 
 
-                    <!-- RECUERDO 8 -->
+                    <!-- =================================
+                         RECUERDO 8 - NORMAL
+                    ================================== -->
 
                     <div class="foto-galeria">
 
@@ -2055,7 +2132,9 @@
 
 
                     <span class="pequeno">
+
                         2025 - ∞
+
                     </span>
 
 
@@ -2092,7 +2171,9 @@
 
 
                         <span class="capitulo-fecha">
+
                             Capítulo 01
+
                         </span>
 
 
@@ -2100,7 +2181,9 @@
 
 
                             <h3>
+
                                 Cuando empezó todo
+
                             </h3>
 
 
@@ -2108,10 +2191,12 @@
 
                                 Nadie sabía realmente
                                 qué iba a terminar saliendo
-                                de todo esto. Éramos simplemente
-                                un grupo de personas coincidiendo
-                                en el mismo lugar y en el mismo
-                                momento.
+                                de todo esto.
+
+                                Éramos simplemente
+                                un grupo de personas
+                                coincidiendo en el mismo lugar
+                                y en el mismo momento.
 
                             </p>
 
@@ -2131,7 +2216,9 @@
 
 
                         <span class="capitulo-fecha">
+
                             Capítulo 02
+
                         </span>
 
 
@@ -2139,7 +2226,9 @@
 
 
                             <h3>
+
                                 La costa 🌊
+
                             </h3>
 
 
@@ -2169,7 +2258,9 @@
 
 
                         <span class="capitulo-fecha">
+
                             Capítulo 03
+
                         </span>
 
 
@@ -2210,7 +2301,9 @@
 
 
                         <span class="capitulo-fecha">
+
                             Capítulo 04
+
                         </span>
 
 
@@ -2218,7 +2311,9 @@
 
 
                             <h3>
+
                                 Lo que todavía falta
+
                             </h3>
 
 
@@ -2250,7 +2345,7 @@
 
 
         <!-- =====================================
-             PREMIOS DEL GRUPO
+             PREMIOS
         ====================================== -->
 
         <section class="premios">
@@ -2263,12 +2358,16 @@
 
 
                     <span class="pequeno">
+
                         Ceremonia oficial
+
                     </span>
 
 
                     <h2>
+
                         Premios del grupo 🏆
+
                     </h2>
 
 
@@ -2287,11 +2386,15 @@
                 <div class="premios-grid">
 
 
+                    <!-- PREMIO 1 -->
+
                     <article class="premio">
 
 
                         <div class="premio-emoji">
+
                             😂
+
                         </div>
 
 
@@ -2324,11 +2427,15 @@
                     </article>
 
 
+                    <!-- PREMIO 2 -->
+
                     <article class="premio">
 
 
                         <div class="premio-emoji">
+
                             📸
+
                         </div>
 
 
@@ -2360,16 +2467,22 @@
                     </article>
 
 
+                    <!-- PREMIO 3 -->
+
                     <article class="premio">
 
 
                         <div class="premio-emoji">
+
                             💤
+
                         </div>
 
 
                         <h3>
+
                             Primero en desaparecer
+
                         </h3>
 
 
@@ -2393,11 +2506,15 @@
                     </article>
 
 
+                    <!-- PREMIO 4 -->
+
                     <article class="premio">
 
 
                         <div class="premio-emoji">
+
                             🗣️
+
                         </div>
 
 
@@ -2429,16 +2546,22 @@
                     </article>
 
 
+                    <!-- PREMIO 5 -->
+
                     <article class="premio">
 
 
                         <div class="premio-emoji">
+
                             🌊
+
                         </div>
 
 
                         <h3>
+
                             Espíritu de la costa
+
                         </h3>
 
 
@@ -2462,11 +2585,15 @@
                     </article>
 
 
+                    <!-- PREMIO 6 -->
+
                     <article class="premio">
 
 
                         <div class="premio-emoji">
+
                             ❤️
+
                         </div>
 
 
@@ -2508,7 +2635,7 @@
 
 
         <!-- =====================================
-             SORPRESA FINAL
+             SORPRESA
         ====================================== -->
 
         <section class="sorpresa">
@@ -2521,12 +2648,16 @@
 
 
                     <span class="pequeno">
+
                         Esperá...
+
                     </span>
 
 
                     <h2>
+
                         Falta una cosa
+
                     </h2>
 
 
@@ -2545,7 +2676,9 @@
                     class="boton-sorpresa"
                     onclick="mostrarSorpresa()"
                 >
+
                     Abrir último mensaje ❤️
+
                 </button>
 
 
@@ -2602,7 +2735,9 @@
                             id="boton-audio-final"
                             onclick="alternarAudioFinal()"
                         >
+
                             ▶ Escuchar mensaje
+
                         </button>
 
 
@@ -2612,9 +2747,13 @@
                         >
 
                             <span class="onda"></span>
+
                             <span class="onda"></span>
+
                             <span class="onda"></span>
+
                             <span class="onda"></span>
+
                             <span class="onda"></span>
 
                         </div>
@@ -2662,12 +2801,16 @@
 
 
                 <span class="infinito-final">
+
                     ∞
+
                 </span>
 
 
                 <span class="corazon-final">
+
                     ❤️
+
                 </span>
 
 
@@ -2690,9 +2833,9 @@
     </main>
 
 
-    <!-- ========================================
-         MODAL FOTO
-    ========================================= -->
+    <!-- =========================================
+         MODAL DE FOTOS
+    ========================================== -->
 
     <div
         id="modal-foto"
@@ -2704,7 +2847,9 @@
             id="cerrar-modal"
             onclick="cerrarFoto()"
         >
+
             ×
+
         </button>
 
 
@@ -2718,9 +2863,9 @@
     </div>
 
 
-    <!-- ========================================
+    <!-- =========================================
          CONFETTI
-    ========================================= -->
+    ========================================== -->
 
     <script
         src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"
@@ -2728,7 +2873,6 @@
 
 
     <script>
-
 
         /* =====================================
            VARIABLES
@@ -2764,6 +2908,12 @@
             );
 
 
+        const videosRecuerdo =
+            document.querySelectorAll(
+                ".video-recuerdo"
+            );
+
+
         let musicaSonando = false;
 
         let regaloAbierto = false;
@@ -2779,7 +2929,9 @@
 
 
             if(regaloAbierto) {
+
                 return;
+
             }
 
 
@@ -2817,35 +2969,40 @@
                 "block";
 
 
-            /* MÚSICA */
+            /* Música */
 
-            musica.volume = .55;
+            musica.volume =
+                .55;
 
 
             musica.play()
 
                 .then(() => {
 
+
                     musicaSonando =
                         true;
 
+
                     botonMusica.innerHTML =
                         "🔊";
+
 
                 })
 
                 .catch(() => {
 
+
                     musicaSonando =
                         false;
+
 
                     botonMusica.innerHTML =
                         "🔇";
 
+
                 });
 
-
-            /* CONFETTI */
 
             lanzarConfeti();
 
@@ -2862,7 +3019,9 @@
                         100,
 
                     origin: {
+
                         y: .5
+
                     }
 
                 });
@@ -2870,8 +3029,6 @@
 
             },450);
 
-
-            /* MOSTRAR PÁGINA */
 
             setTimeout(() => {
 
@@ -2948,7 +3105,9 @@
                         60,
 
                     origin: {
+
                         x: 0
+
                     }
 
                 });
@@ -2966,7 +3125,9 @@
                         60,
 
                     origin: {
+
                         x: 1
+
                     }
 
                 });
@@ -2991,7 +3152,7 @@
 
 
         /* =====================================
-           MÚSICA DE FONDO
+           MÚSICA
         ====================================== */
 
         function alternarMusica() {
@@ -3002,128 +3163,135 @@
 
                 musica.pause();
 
+
                 musicaSonando =
                     false;
+
 
                 botonMusica.innerHTML =
                     "🔇";
 
 
-            }
-
-
-            else{
-
-
-                /* PAUSAR AUDIO FINAL */
-
-                if(audioFinalSonando){
-
-
-                    audioFinal.pause();
-
-
-                    audioFinalSonando =
-                        false;
-
-
-                    botonAudioFinal.innerHTML =
-                        "▶ Continuar mensaje";
-
-
-                    ondas.classList.remove(
-                        "activo"
-                    );
-
-
-                }
-
-
-                /* PAUSAR VIDEOS */
-
-                pausarVideos();
-
-
-                musica.play();
-
-
-                musicaSonando =
-                    true;
-
-
-                botonMusica.innerHTML =
-                    "🔊";
+                return;
 
 
             }
+
+
+            /* Pausar audio final */
+
+            if(audioFinalSonando){
+
+
+                audioFinal.pause();
+
+
+                audioFinalSonando =
+                    false;
+
+
+                botonAudioFinal.innerHTML =
+                    "▶ Continuar mensaje";
+
+
+                ondas.classList.remove(
+                    "activo"
+                );
+
+
+            }
+
+
+            /* Pausar videos */
+
+            pausarVideos();
+
+
+            musica.play();
+
+
+            musicaSonando =
+                true;
+
+
+            botonMusica.innerHTML =
+                "🔊";
 
 
         }
 
 
         /* =====================================
-           VIDEOS DE LA GALERÍA
+           VIDEOS
         ====================================== */
-
-        const videosRecuerdo =
-            document.querySelectorAll(
-                ".video-recuerdo"
-            );
-
 
         videosRecuerdo.forEach(
             function(video){
 
-
-                /* CUANDO EMPIEZA UN VIDEO */
 
                 video.addEventListener(
                     "play",
                     function(){
 
 
-                        /* Pausar música */
+                        /*
+                            PAUSA LA MÚSICA
+                        */
 
                         musica.pause();
 
+
                         musicaSonando =
                             false;
+
 
                         botonMusica.innerHTML =
                             "🔇";
 
 
-                        /* Pausar audio final */
+                        /*
+                            PAUSA AUDIO FINAL
+                        */
 
                         if(audioFinalSonando){
 
+
                             audioFinal.pause();
+
 
                             audioFinalSonando =
                                 false;
 
+
                             botonAudioFinal.innerHTML =
                                 "▶ Continuar mensaje";
+
 
                             ondas.classList.remove(
                                 "activo"
                             );
 
+
                         }
 
 
-                        /* Pausar cualquier otro video */
+                        /*
+                            PAUSA EL OTRO VIDEO
+                        */
 
                         videosRecuerdo.forEach(
                             function(otroVideo){
 
+
                                 if(
-                                    otroVideo !== video
+                                    otroVideo !==
+                                    video
                                 ){
 
                                     otroVideo.pause();
 
                                 }
+
 
                             }
                         );
@@ -3143,7 +3311,9 @@
             videosRecuerdo.forEach(
                 function(video){
 
+
                     video.pause();
+
 
                 }
             );
@@ -3153,7 +3323,7 @@
 
 
         /* =====================================
-           MOSTRAR SORPRESA
+           SORPRESA
         ====================================== */
 
         function mostrarSorpresa() {
@@ -3178,7 +3348,9 @@
                     120,
 
                 origin: {
+
                     y: .7
+
                 }
 
             });
@@ -3230,7 +3402,9 @@
             }
 
 
-            /* PAUSAR MÚSICA */
+            /*
+                PAUSAR MÚSICA
+            */
 
             musica.pause();
 
@@ -3243,15 +3417,18 @@
                 "🔇";
 
 
-            /* PAUSAR VIDEOS */
+            /*
+                PAUSAR VIDEOS
+            */
 
             pausarVideos();
 
 
-            /* REPRODUCIR MENSAJE */
+            /*
+                REPRODUCIR AUDIO FINAL
+            */
 
             audioFinal.play()
-
 
                 .then(() => {
 
@@ -3271,7 +3448,6 @@
 
                 })
 
-
                 .catch(() => {
 
 
@@ -3285,8 +3461,6 @@
 
         }
 
-
-        /* CUANDO TERMINA EL AUDIO FINAL */
 
         audioFinal.addEventListener(
             "ended",
@@ -3376,7 +3550,7 @@
 
 
         /* =====================================
-           ESC PARA CERRAR FOTO
+           ESC
         ====================================== */
 
         document.addEventListener(
