@@ -26,12 +26,11 @@
         rel="stylesheet"
     >
 
-
     <style>
 
-        /* =========================================
+        /* =====================================================
            GENERAL
-        ========================================== */
+        ===================================================== */
 
         * {
             margin: 0;
@@ -64,9 +63,9 @@
         }
 
 
-        /* =========================================
-           REGALO INICIAL
-        ========================================== */
+        /* =====================================================
+           PANTALLA INICIAL
+        ===================================================== */
 
         #pantalla-regalo {
 
@@ -107,9 +106,12 @@
         }
 
         .regalo-contenedor {
+
             position: relative;
             z-index: 3;
+
             width: min(540px, 100%);
+
             text-align: center;
         }
 
@@ -160,13 +162,10 @@
         .regalo {
 
             display: inline-flex;
-
             align-items: center;
-
             justify-content: center;
 
             width: 240px;
-
             height: 240px;
 
             cursor: pointer;
@@ -183,7 +182,6 @@
         .regalo img {
 
             max-width: 220px;
-
             max-height: 220px;
 
             object-fit: contain;
@@ -228,7 +226,6 @@
         .tocar {
 
             display: inline-flex;
-
             align-items: center;
 
             gap: 8px;
@@ -267,9 +264,9 @@
         }
 
 
-        /* =========================================
+        /* =====================================================
            OLAS
-        ========================================== */
+        ===================================================== */
 
         .olas-fondo {
 
@@ -307,9 +304,9 @@
         }
 
 
-        /* =========================================
+        /* =====================================================
            BOTÓN MÚSICA
-        ========================================== */
+        ===================================================== */
 
         #boton-musica {
 
@@ -339,7 +336,8 @@
             box-shadow:
                 0 7px 25px rgba(0,0,0,.15);
 
-            transition: transform .2s ease;
+            transition:
+                transform .2s ease;
         }
 
         #boton-musica:hover {
@@ -347,14 +345,12 @@
         }
 
 
-        /* =========================================
+        /* =====================================================
            PÁGINA
-        ========================================== */
+        ===================================================== */
 
         #pagina {
-
             opacity: 0;
-
             transition: opacity 1s ease;
         }
 
@@ -363,9 +359,9 @@
         }
 
 
-        /* =========================================
+        /* =====================================================
            PORTADA
-        ========================================== */
+        ===================================================== */
 
         .portada {
 
@@ -374,9 +370,7 @@
             min-height: 100vh;
 
             display: flex;
-
             align-items: center;
-
             justify-content: center;
 
             padding: 100px 20px;
@@ -499,9 +493,9 @@
         }
 
 
-        /* =========================================
+        /* =====================================================
            SECCIONES
-        ========================================== */
+        ===================================================== */
 
         section {
             padding: 100px 20px;
@@ -564,9 +558,9 @@
         }
 
 
-        /* =========================================
+        /* =====================================================
            INTRO
-        ========================================== */
+        ===================================================== */
 
         .introduccion {
             background: #f7f2e8;
@@ -660,9 +654,9 @@
         }
 
 
-        /* =========================================
+        /* =====================================================
            GALERÍA
-        ========================================== */
+        ===================================================== */
 
         .galeria-seccion {
             background: #dceff2;
@@ -678,6 +672,8 @@
             grid-auto-rows: 230px;
 
             gap: 15px;
+
+            align-items: stretch;
         }
 
         .foto-galeria {
@@ -700,7 +696,6 @@
         .foto-galeria img {
 
             width: 100%;
-
             height: 100%;
 
             object-fit: cover;
@@ -714,9 +709,9 @@
         }
 
 
-        /* =========================================
+        /* =====================================================
            VIDEOS
-        ========================================== */
+        ===================================================== */
 
         .video-galeria {
 
@@ -730,7 +725,6 @@
             display: block;
 
             width: 100%;
-
             height: 100%;
 
             object-fit: cover;
@@ -739,12 +733,12 @@
         }
 
 
-        /* =========================================
-           FORMAS DE LA GALERÍA
-        ========================================== */
+        /* =====================================================
+           DISTRIBUCIÓN DE LA GALERÍA
+        ===================================================== */
 
 
-        /* RECUERDO 1 GRANDE */
+        /* FOTO 1 GRANDE */
 
         .foto-galeria:nth-child(1) {
 
@@ -754,36 +748,43 @@
         }
 
 
-        /* RECUERDO 4 - VIDEO VERTICAL */
+        /* VIDEO 4 VERTICAL */
 
         .foto-galeria:nth-child(4) {
 
-            grid-row: span 2;
-
             grid-column: span 1;
+
+            grid-row: span 2;
         }
 
 
-        /* RECUERDO 5 - VIDEO VERTICAL */
+        /* VIDEO 5 VERTICAL */
 
         .foto-galeria:nth-child(5) {
 
-            grid-row: span 2;
-
             grid-column: span 1;
+
+            grid-row: span 2;
         }
 
 
-        /*
-            IMPORTANTE:
-            EL 7 Y EL 8 NO TIENEN REGLAS ESPECIALES.
-            POR ESO QUEDAN EN TAMAÑO NORMAL.
-        */
+        /* FOTO 8 VERTICAL Y CENTRADA */
+
+        .foto-galeria:nth-child(8) {
+
+            grid-column: 2 / 4;
+
+            grid-row: span 2;
+
+            width: calc(50% - 7.5px);
+
+            justify-self: center;
+        }
 
 
-        /* =========================================
+        /* =====================================================
            HISTORIA
-        ========================================== */
+        ===================================================== */
 
         .historia {
             background: #f7f2e8;
@@ -807,7 +808,6 @@
             left: 25px;
 
             top: 0;
-
             bottom: 0;
 
             width: 3px;
@@ -839,11 +839,9 @@
             position: absolute;
 
             left: 12px;
-
             top: 4px;
 
             width: 29px;
-
             height: 29px;
 
             border-radius: 50%;
@@ -902,9 +900,9 @@
         }
 
 
-        /* =========================================
+        /* =====================================================
            PREMIOS
-        ========================================== */
+        ===================================================== */
 
         .premios {
 
@@ -913,11 +911,15 @@
             color: white;
         }
 
-        .premios .titulo-seccion .pequeno {
+        .premios
+        .titulo-seccion
+        .pequeno {
+
             color: #a5e5ef;
         }
 
-        .premios .titulo-seccion p {
+        .premios
+        .titulo-seccion p {
 
             color:
                 rgba(
@@ -1036,9 +1038,9 @@
         }
 
 
-        /* =========================================
+        /* =====================================================
            SORPRESA
-        ========================================== */
+        ===================================================== */
 
         .sorpresa {
 
@@ -1145,9 +1147,9 @@
         }
 
 
-        /* =========================================
+        /* =====================================================
            AUDIO FINAL
-        ========================================== */
+        ===================================================== */
 
         .audio-final {
 
@@ -1159,7 +1161,8 @@
                 1px solid #e3e8e9;
         }
 
-        .audio-final .audio-texto {
+        .audio-final
+        .audio-texto {
 
             color: #18333c;
 
@@ -1269,9 +1272,9 @@
         }
 
 
-        /* =========================================
+        /* =====================================================
            FINAL
-        ========================================== */
+        ===================================================== */
 
         .final {
 
@@ -1400,9 +1403,9 @@
         }
 
 
-        /* =========================================
-           MODAL FOTO
-        ========================================== */
+        /* =====================================================
+           MODAL DE FOTOS
+        ===================================================== */
 
         #modal-foto {
 
@@ -1463,9 +1466,9 @@
         }
 
 
-        /* =========================================
+        /* =====================================================
            TABLET
-        ========================================== */
+        ===================================================== */
 
         @media(max-width:850px) {
 
@@ -1501,21 +1504,21 @@
             }
 
 
-            /*
-                RESETEAMOS TODAS LAS FORMAS
-            */
+            /* RESET */
 
             .foto-galeria {
 
                 grid-column: auto;
 
                 grid-row: auto;
+
+                width: auto;
+
+                justify-self: stretch;
             }
 
 
-            /*
-                RECUERDO 1 GRANDE
-            */
+            /* FOTO 1 GRANDE */
 
             .foto-galeria:nth-child(1) {
 
@@ -1525,9 +1528,7 @@
             }
 
 
-            /*
-                RECUERDO 4 VERTICAL
-            */
+            /* VIDEO 4 */
 
             .foto-galeria:nth-child(4) {
 
@@ -1537,9 +1538,7 @@
             }
 
 
-            /*
-                RECUERDO 5 VERTICAL
-            */
+            /* VIDEO 5 VERTICAL */
 
             .foto-galeria:nth-child(5) {
 
@@ -1549,9 +1548,18 @@
             }
 
 
-            /*
-                7 Y 8 QUEDAN NORMALES
-            */
+            /* FOTO 8 CENTRADA */
+
+            .foto-galeria:nth-child(8) {
+
+                grid-column: 1 / -1;
+
+                grid-row: span 2;
+
+                width: calc(50% - 7.5px);
+
+                justify-self: center;
+            }
 
 
             .premios-grid {
@@ -1562,9 +1570,9 @@
         }
 
 
-        /* =========================================
+        /* =====================================================
            CELULAR
-        ========================================== */
+        ===================================================== */
 
         @media(max-width:600px) {
 
@@ -1619,10 +1627,7 @@
             }
 
 
-            /*
-                LOS VIDEOS 4 Y 5
-                SIGUEN VERTICALES
-            */
+            /* VIDEO 4 Y VIDEO 5 */
 
             .foto-galeria:nth-child(4),
             .foto-galeria:nth-child(5) {
@@ -1633,9 +1638,18 @@
             }
 
 
-            /*
-                7 Y 8 SON NORMALES
-            */
+            /* FOTO 8 CENTRADA */
+
+            .foto-galeria:nth-child(8) {
+
+                grid-column: 1 / -1;
+
+                grid-row: span 2;
+
+                width: calc(50% - 4.5px);
+
+                justify-self: center;
+            }
 
 
             #mensaje-sorpresa {
@@ -1646,9 +1660,7 @@
             }
 
             .final {
-
-                min-height:
-                    75vh;
+                min-height: 75vh;
             }
         }
 
@@ -1660,9 +1672,7 @@
 <body class="bloqueado">
 
 
-    <!-- =========================================
-         MÚSICA DE FONDO
-    ========================================== -->
+    <!-- MÚSICA DE FONDO -->
 
     <audio id="musica" loop>
 
@@ -1674,9 +1684,7 @@
     </audio>
 
 
-    <!-- =========================================
-         AUDIO FINAL
-    ========================================== -->
+    <!-- AUDIO FINAL -->
 
     <audio id="audio-final">
 
@@ -1688,9 +1696,9 @@
     </audio>
 
 
-    <!-- =========================================
+    <!-- =====================================================
          REGALO
-    ========================================== -->
+    ====================================================== -->
 
     <div id="pantalla-regalo">
 
@@ -1795,9 +1803,7 @@
     </div>
 
 
-    <!-- =========================================
-         BOTÓN MÚSICA
-    ========================================== -->
+    <!-- BOTÓN DE MÚSICA -->
 
     <button
         id="boton-musica"
@@ -1810,16 +1816,14 @@
     </button>
 
 
-    <!-- =========================================
+    <!-- =====================================================
          PÁGINA
-    ========================================== -->
+    ====================================================== -->
 
     <main id="pagina">
 
 
-        <!-- =====================================
-             PORTADA
-        ====================================== -->
+        <!-- PORTADA -->
 
         <section class="portada">
 
@@ -1862,9 +1866,7 @@
         </section>
 
 
-        <!-- =====================================
-             INTRO
-        ====================================== -->
+        <!-- INTRO -->
 
         <section class="introduccion">
 
@@ -1933,8 +1935,7 @@
 
                         <span>
 
-                            nosotros ❤️
-                            (Es bastante preocupante las apariciones de nico)
+                            nosotros ❤️ (Es bastante preocupante las apariciones de nico)
 
                         </span>
 
@@ -1951,9 +1952,9 @@
         </section>
 
 
-        <!-- =====================================
+        <!-- =====================================================
              GALERÍA
-        ====================================== -->
+        ====================================================== -->
 
         <section class="galeria-seccion">
 
@@ -1993,7 +1994,7 @@
                 <div class="galeria">
 
 
-                    <!-- RECUERDO 1 -->
+                    <!-- 1 -->
 
                     <div class="foto-galeria">
 
@@ -2006,7 +2007,7 @@
                     </div>
 
 
-                    <!-- RECUERDO 2 -->
+                    <!-- 2 -->
 
                     <div class="foto-galeria">
 
@@ -2019,7 +2020,7 @@
                     </div>
 
 
-                    <!-- RECUERDO 3 -->
+                    <!-- 3 -->
 
                     <div class="foto-galeria">
 
@@ -2032,9 +2033,7 @@
                     </div>
 
 
-                    <!-- =================================
-                         RECUERDO 4 - VIDEO
-                    ================================== -->
+                    <!-- 4 VIDEO -->
 
                     <div class="foto-galeria video-galeria">
 
@@ -2049,9 +2048,7 @@
                     </div>
 
 
-                    <!-- =================================
-                         RECUERDO 5 - VIDEO VERTICAL
-                    ================================== -->
+                    <!-- 5 VIDEO VERTICAL -->
 
                     <div class="foto-galeria video-galeria">
 
@@ -2066,7 +2063,7 @@
                     </div>
 
 
-                    <!-- RECUERDO 6 -->
+                    <!-- 6 -->
 
                     <div class="foto-galeria">
 
@@ -2079,9 +2076,7 @@
                     </div>
 
 
-                    <!-- =================================
-                         RECUERDO 7 - NORMAL
-                    ================================== -->
+                    <!-- 7 -->
 
                     <div class="foto-galeria">
 
@@ -2094,9 +2089,7 @@
                     </div>
 
 
-                    <!-- =================================
-                         RECUERDO 8 - NORMAL
-                    ================================== -->
+                    <!-- 8 CENTRADA -->
 
                     <div class="foto-galeria">
 
@@ -2118,9 +2111,9 @@
         </section>
 
 
-        <!-- =====================================
+        <!-- =====================================================
              HISTORIA
-        ====================================== -->
+        ====================================================== -->
 
         <section class="historia">
 
@@ -2161,8 +2154,6 @@
 
                 <div class="timeline">
 
-
-                    <!-- CAPÍTULO 1 -->
 
                     <article class="capitulo">
 
@@ -2207,8 +2198,6 @@
                     </article>
 
 
-                    <!-- CAPÍTULO 2 -->
-
                     <article class="capitulo">
 
 
@@ -2248,8 +2237,6 @@
 
                     </article>
 
-
-                    <!-- CAPÍTULO 3 -->
 
                     <article class="capitulo">
 
@@ -2291,8 +2278,6 @@
 
                     </article>
 
-
-                    <!-- CAPÍTULO 4 -->
 
                     <article class="capitulo">
 
@@ -2344,9 +2329,9 @@
         </section>
 
 
-        <!-- =====================================
+        <!-- =====================================================
              PREMIOS
-        ====================================== -->
+        ====================================================== -->
 
         <section class="premios">
 
@@ -2386,17 +2371,11 @@
                 <div class="premios-grid">
 
 
-                    <!-- PREMIO 1 -->
-
                     <article class="premio">
 
-
                         <div class="premio-emoji">
-
                             😂
-
                         </div>
-
 
                         <h3>
 
@@ -2404,7 +2383,6 @@
                             más contagiosa
 
                         </h3>
-
 
                         <p>
 
@@ -2416,28 +2394,20 @@
 
                         </p>
 
-
                         <span class="ganador">
 
                             Ganador/a: ???
 
                         </span>
 
-
                     </article>
 
 
-                    <!-- PREMIO 2 -->
-
                     <article class="premio">
 
-
                         <div class="premio-emoji">
-
                             📸
-
                         </div>
-
 
                         <h3>
 
@@ -2445,7 +2415,6 @@
                             de arruinar una foto
 
                         </h3>
-
 
                         <p>
 
@@ -2456,35 +2425,26 @@
 
                         </p>
 
-
                         <span class="ganador">
 
                             Ganador/a: ???
 
                         </span>
 
-
                     </article>
 
 
-                    <!-- PREMIO 3 -->
-
                     <article class="premio">
 
-
                         <div class="premio-emoji">
-
                             💤
-
                         </div>
-
 
                         <h3>
 
                             Primero en desaparecer
 
                         </h3>
-
 
                         <p>
 
@@ -2495,28 +2455,20 @@
 
                         </p>
 
-
                         <span class="ganador">
 
                             Ganador/a: ???
 
                         </span>
 
-
                     </article>
 
 
-                    <!-- PREMIO 4 -->
-
                     <article class="premio">
 
-
                         <div class="premio-emoji">
-
                             🗣️
-
                         </div>
-
 
                         <h3>
 
@@ -2524,7 +2476,6 @@
                             quedar callado
 
                         </h3>
-
 
                         <p>
 
@@ -2535,35 +2486,26 @@
 
                         </p>
 
-
                         <span class="ganador">
 
                             Ganador/a: ???
 
                         </span>
 
-
                     </article>
 
 
-                    <!-- PREMIO 5 -->
-
                     <article class="premio">
 
-
                         <div class="premio-emoji">
-
                             🌊
-
                         </div>
-
 
                         <h3>
 
                             Espíritu de la costa
 
                         </h3>
-
 
                         <p>
 
@@ -2574,28 +2516,20 @@
 
                         </p>
 
-
                         <span class="ganador">
 
                             Ganador/a: ???
 
                         </span>
 
-
                     </article>
 
 
-                    <!-- PREMIO 6 -->
-
                     <article class="premio">
 
-
                         <div class="premio-emoji">
-
                             ❤️
-
                         </div>
-
 
                         <h3>
 
@@ -2603,7 +2537,6 @@
                             de cumpleaños
 
                         </h3>
-
 
                         <p>
 
@@ -2614,13 +2547,11 @@
 
                         </p>
 
-
                         <span class="ganador">
 
                             Ganadora: Juli
 
                         </span>
-
 
                     </article>
 
@@ -2634,9 +2565,9 @@
         </section>
 
 
-        <!-- =====================================
+        <!-- =====================================================
              SORPRESA
-        ====================================== -->
+        ====================================================== -->
 
         <section class="sorpresa">
 
@@ -2717,8 +2648,6 @@
                     </p>
 
 
-                    <!-- AUDIO FINAL -->
-
                     <div class="audio-final">
 
 
@@ -2747,13 +2676,9 @@
                         >
 
                             <span class="onda"></span>
-
                             <span class="onda"></span>
-
                             <span class="onda"></span>
-
                             <span class="onda"></span>
-
                             <span class="onda"></span>
 
                         </div>
@@ -2771,9 +2696,9 @@
         </section>
 
 
-        <!-- =====================================
+        <!-- =====================================================
              FINAL
-        ====================================== -->
+        ====================================================== -->
 
         <section class="final">
 
@@ -2833,9 +2758,7 @@
     </main>
 
 
-    <!-- =========================================
-         MODAL DE FOTOS
-    ========================================== -->
+    <!-- MODAL FOTO -->
 
     <div
         id="modal-foto"
@@ -2863,9 +2786,7 @@
     </div>
 
 
-    <!-- =========================================
-         CONFETTI
-    ========================================== -->
+    <!-- CONFETTI -->
 
     <script
         src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"
@@ -2874,39 +2795,30 @@
 
     <script>
 
-        /* =====================================
-           VARIABLES
-        ====================================== */
-
         const musica =
             document.getElementById(
                 "musica"
             );
-
 
         const botonMusica =
             document.getElementById(
                 "boton-musica"
             );
 
-
         const audioFinal =
             document.getElementById(
                 "audio-final"
             );
-
 
         const botonAudioFinal =
             document.getElementById(
                 "boton-audio-final"
             );
 
-
         const ondas =
             document.getElementById(
                 "ondas"
             );
-
 
         const videosRecuerdo =
             document.querySelectorAll(
@@ -2921,17 +2833,15 @@
         let audioFinalSonando = false;
 
 
-        /* =====================================
+        /* =====================================================
            ABRIR REGALO
-        ====================================== */
+        ===================================================== */
 
         function abrirRegalo() {
 
 
             if(regaloAbierto) {
-
                 return;
-
             }
 
 
@@ -2943,12 +2853,10 @@
                     "regalo"
                 );
 
-
             const cerrado =
                 document.getElementById(
                     "regalo-cerrado"
                 );
-
 
             const abierto =
                 document.getElementById(
@@ -2969,37 +2877,28 @@
                 "block";
 
 
-            /* Música */
-
-            musica.volume =
-                .55;
+            musica.volume = .55;
 
 
             musica.play()
 
                 .then(() => {
 
-
                     musicaSonando =
                         true;
 
-
                     botonMusica.innerHTML =
                         "🔊";
-
 
                 })
 
                 .catch(() => {
 
-
                     musicaSonando =
                         false;
 
-
                     botonMusica.innerHTML =
                         "🔇";
-
 
                 });
 
@@ -3019,9 +2918,7 @@
                         100,
 
                     origin: {
-
                         y: .5
-
                     }
 
                 });
@@ -3074,9 +2971,9 @@
         }
 
 
-        /* =====================================
+        /* =====================================================
            CONFETTI
-        ====================================== */
+        ===================================================== */
 
         function lanzarConfeti() {
 
@@ -3095,19 +2992,14 @@
 
                 confetti({
 
-                    particleCount:
-                        6,
+                    particleCount: 6,
 
-                    angle:
-                        60,
+                    angle: 60,
 
-                    spread:
-                        60,
+                    spread: 60,
 
                     origin: {
-
                         x: 0
-
                     }
 
                 });
@@ -3115,19 +3007,14 @@
 
                 confetti({
 
-                    particleCount:
-                        6,
+                    particleCount: 6,
 
-                    angle:
-                        120,
+                    angle: 120,
 
-                    spread:
-                        60,
+                    spread: 60,
 
                     origin: {
-
                         x: 1
-
                     }
 
                 });
@@ -3151,9 +3038,9 @@
         }
 
 
-        /* =====================================
+        /* =====================================================
            MÚSICA
-        ====================================== */
+        ===================================================== */
 
         function alternarMusica() {
 
@@ -3178,8 +3065,6 @@
             }
 
 
-            /* Pausar audio final */
-
             if(audioFinalSonando){
 
 
@@ -3202,8 +3087,6 @@
             }
 
 
-            /* Pausar videos */
-
             pausarVideos();
 
 
@@ -3221,9 +3104,9 @@
         }
 
 
-        /* =====================================
+        /* =====================================================
            VIDEOS
-        ====================================== */
+        ===================================================== */
 
         videosRecuerdo.forEach(
             function(video){
@@ -3233,10 +3116,6 @@
                     "play",
                     function(){
 
-
-                        /*
-                            PAUSA LA MÚSICA
-                        */
 
                         musica.pause();
 
@@ -3248,10 +3127,6 @@
                         botonMusica.innerHTML =
                             "🔇";
 
-
-                        /*
-                            PAUSA AUDIO FINAL
-                        */
 
                         if(audioFinalSonando){
 
@@ -3275,17 +3150,12 @@
                         }
 
 
-                        /*
-                            PAUSA EL OTRO VIDEO
-                        */
-
                         videosRecuerdo.forEach(
                             function(otroVideo){
 
 
                                 if(
-                                    otroVideo !==
-                                    video
+                                    otroVideo !== video
                                 ){
 
                                     otroVideo.pause();
@@ -3311,9 +3181,7 @@
             videosRecuerdo.forEach(
                 function(video){
 
-
                     video.pause();
-
 
                 }
             );
@@ -3322,9 +3190,9 @@
         }
 
 
-        /* =====================================
+        /* =====================================================
            SORPRESA
-        ====================================== */
+        ===================================================== */
 
         function mostrarSorpresa() {
 
@@ -3348,9 +3216,7 @@
                     120,
 
                 origin: {
-
                     y: .7
-
                 }
 
             });
@@ -3370,9 +3236,9 @@
         }
 
 
-        /* =====================================
+        /* =====================================================
            AUDIO FINAL
-        ====================================== */
+        ===================================================== */
 
         function alternarAudioFinal(){
 
@@ -3402,10 +3268,6 @@
             }
 
 
-            /*
-                PAUSAR MÚSICA
-            */
-
             musica.pause();
 
 
@@ -3417,16 +3279,8 @@
                 "🔇";
 
 
-            /*
-                PAUSAR VIDEOS
-            */
-
             pausarVideos();
 
-
-            /*
-                REPRODUCIR AUDIO FINAL
-            */
 
             audioFinal.play()
 
@@ -3484,9 +3338,9 @@
         );
 
 
-        /* =====================================
-           ABRIR FOTO
-        ====================================== */
+        /* =====================================================
+           FOTOS
+        ===================================================== */
 
         function abrirFoto(src){
 
@@ -3511,10 +3365,6 @@
 
         }
 
-
-        /* =====================================
-           CERRAR FOTO
-        ====================================== */
 
         function cerrarFoto(event){
 
@@ -3548,10 +3398,6 @@
 
         }
 
-
-        /* =====================================
-           ESC
-        ====================================== */
 
         document.addEventListener(
             "keydown",
